@@ -1,7 +1,7 @@
 
   # IzzOnLine si Stefania Izzo
 
-  This is a code bundle for IzzOnLine si Stefania Izzo. The original project is available at https://www.figma.com/design/KvpCPTDddnUuHs4AzYDlVY/IzzOnLine-si-Stefania-Izzo.
+  This is a code for IzzOnLine di Stefania Izzo website: https://www.izzonline.it
 
   ## Running the code
 
