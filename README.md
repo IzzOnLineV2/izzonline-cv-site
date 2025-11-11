@@ -1,7 +1,7 @@
 
   # IzzOnLine di Stefania Izzo
 
-  This is a code for IzzOnLine di Stefania Izzo website: https://www.izzonline.it
+  This is a code bundle for IzzOnLine di Stefania Izzo. The original project is available at https://izzonline.it
 
   ## Running the code
 

@@ -1,7 +1,7 @@
 import { motion } from 'motion/react';
 import { MapPin, Mail, Phone, ExternalLink, Github, Linkedin, MessageCircle, Facebook, Instagram } from 'lucide-react';
 import { Button } from './ui/button';
-import profileImage from 'figma:asset/f7bfc6a958b82b5a0ab60f201dbcee3fddfbe305.png';
+const profileImage = 'https://survey.izzonline.it/assets/stefy.png';
 
 export function Hero() {
   const scrollToContact = () => {
