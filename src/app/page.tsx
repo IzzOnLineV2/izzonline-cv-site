@@ -33,7 +33,7 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-purple-950 to-slate-950 text-slate-100 dark:bg-gradient-to-br dark:from-slate-950 dark:via-purple-950 dark:to-slate-950 dark:text-slate-100 light:bg-gradient-to-br light:from-white light:via-purple-50/30 light:to-pink-50/30 light:text-slate-900">
+    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-purple-950 to-slate-950 text-slate-100 light:from-white light:via-purple-50/30 light:to-pink-50/30 light:text-slate-900">
       <Header activeSection={activeSection} />
       <main>
         <Hero />
