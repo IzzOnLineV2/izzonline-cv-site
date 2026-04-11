@@ -21,8 +21,8 @@ export const translations = {
     
     // Hero
     'hero.greeting': 'Hi, I\'m',
-    'hero.role': 'Senior Java Developer & AI',
-    'hero.subtitle': '15+ years of expertise in enterprise Java development, microservices architecture, and AI integration',
+    'hero.role': 'AI/ML Engineer & Senior Java Backend',
+    'hero.subtitle': 'Building AI APIs & Products with LLMs (Spring AI, OpenAI, Java/Python)',
     'hero.cta.contact': 'Get in Touch',
     'hero.cta.experience': 'View Experience',
     
@@ -121,8 +121,8 @@ export const translations = {
     
     // Hero
     'hero.greeting': 'Ciao, sono',
-    'hero.role': 'Senior Java Developer & AI',
-    'hero.subtitle': '15+ anni di esperienza nello sviluppo Java enterprise, architetture a microservizi e integrazione AI',
+    'hero.role': 'AI/ML Engineer & Senior Java Backend',
+    'hero.subtitle': 'Building AI APIs & Products with LLMs (Spring AI, OpenAI, Java/Python)',
     'hero.cta.contact': 'Contattami',
     'hero.cta.experience': 'Vedi Esperienza',
     
