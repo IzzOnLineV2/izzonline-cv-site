@@ -138,7 +138,7 @@ export function Experience() {
                   index % 4 === 2 ? 'bg-pink-400' : 'bg-emerald-400'
                 }`} />
 
-                <Card className={`p-6 bg-slate-800/50 dark:bg-slate-800/50 light:bg-white border-slate-700 dark:border-slate-700 light:border-purple-200 transition-all duration-300 hover:shadow-lg ${
+                <Card className={`p-6 bg-slate-800/50 dark:bg-slate-800/50 light:bg-white/80 light:shadow-sm border-slate-700 dark:border-slate-700 light:border-purple-200 transition-all duration-300 hover:shadow-lg ${
                   index % 4 === 0 ? 'hover:border-cyan-400/50 hover:shadow-cyan-500/10' :
                   index % 4 === 1 ? 'hover:border-purple-400/50 hover:shadow-purple-500/10' :
                   index % 4 === 2 ? 'hover:border-pink-400/50 hover:shadow-pink-500/10' : 'hover:border-emerald-400/50 hover:shadow-emerald-500/10'

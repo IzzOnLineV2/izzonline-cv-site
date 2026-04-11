@@ -58,12 +58,15 @@ export function ParticleNetwork() {
       mouseRef.current = { x: -1000, y: -1000 };
     };
 
+    const isDark = () => document.documentElement.classList.contains('dark') || !document.documentElement.classList.contains('light');
+
     const animate = () => {
       const { w, h } = sizeRef.current;
       ctx.clearRect(0, 0, w, h);
 
       const particles = particlesRef.current;
       const mouse = mouseRef.current;
+      const dark = isDark();
 
       for (const p of particles) {
         p.x += p.vx;
@@ -86,7 +89,9 @@ export function ParticleNetwork() {
 
         ctx.beginPath();
         ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
-        ctx.fillStyle = `rgba(168, 130, 255, ${p.opacity})`;
+        ctx.fillStyle = dark
+          ? `rgba(168, 130, 255, ${p.opacity})`
+          : `rgba(139, 92, 246, ${p.opacity * 0.8})`;
         ctx.fill();
       }
 
@@ -97,11 +102,13 @@ export function ParticleNetwork() {
           const dist = Math.sqrt(dx * dx + dy * dy);
 
           if (dist < connectionDistance) {
-            const opacity = (1 - dist / connectionDistance) * 0.15;
+            const opacity = (1 - dist / connectionDistance) * (dark ? 0.15 : 0.2);
             ctx.beginPath();
             ctx.moveTo(particles[i].x, particles[i].y);
             ctx.lineTo(particles[j].x, particles[j].y);
-            ctx.strokeStyle = `rgba(139, 92, 246, ${opacity})`;
+            ctx.strokeStyle = dark
+              ? `rgba(139, 92, 246, ${opacity})`
+              : `rgba(124, 58, 237, ${opacity})`;
             ctx.lineWidth = 0.5;
             ctx.stroke();
           }
@@ -119,7 +126,9 @@ export function ParticleNetwork() {
             ctx.beginPath();
             ctx.moveTo(mouse.x, mouse.y);
             ctx.lineTo(p.x, p.y);
-            ctx.strokeStyle = `rgba(34, 211, 238, ${opacity})`;
+            ctx.strokeStyle = dark
+              ? `rgba(34, 211, 238, ${opacity})`
+              : `rgba(6, 182, 212, ${opacity})`;
             ctx.lineWidth = 0.8;
             ctx.stroke();
           }

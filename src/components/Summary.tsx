@@ -87,7 +87,7 @@ export function Summary() {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               viewport={{ once: true }}
             >
-              <Card className={`p-6 bg-slate-800/50 dark:bg-slate-800/50 light:bg-white border-slate-700 dark:border-slate-700 light:border-purple-200 ${competency.hoverColor} transition-all duration-300 hover:shadow-lg h-full group`}>
+              <Card className={`p-6 bg-slate-800/50 dark:bg-slate-800/50 light:bg-white/80 light:shadow-sm border-slate-700 dark:border-slate-700 light:border-purple-200 ${competency.hoverColor} transition-all duration-300 hover:shadow-lg h-full group`}>
                 <div className="flex flex-col items-start h-full">
                   <div className={`mb-4 p-3 rounded-lg bg-gradient-to-br ${competency.color} group-hover:from-${competency.color.split('-')[0]}-500/20 group-hover:to-${competency.color.split('-')[2]} transition-colors`}>
                     <competency.icon className={`w-6 h-6 ${competency.iconColor}`} />

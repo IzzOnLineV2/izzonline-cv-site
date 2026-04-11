@@ -187,7 +187,7 @@ export function Skills() {
   ];
 
   return (
-    <section id="skills" className="py-20 bg-slate-900/50 dark:bg-slate-900/50 light:bg-white/50">
+    <section id="skills" className="py-20 bg-slate-900/50 dark:bg-slate-900/50 light:bg-purple-50/80">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -206,7 +206,7 @@ export function Skills() {
         </motion.div>
 
         <Tabs defaultValue="overview" className="max-w-6xl mx-auto">
-          <TabsList className="grid w-full grid-cols-2 mb-8 bg-slate-800/50 dark:bg-slate-800/50 light:bg-white border-0 dark:border-0 light:border light:border-purple-200">
+          <TabsList className="grid w-full grid-cols-2 mb-8 bg-slate-800/50 dark:bg-slate-800/50 light:bg-white/80 light:shadow-sm border-0 dark:border-0 light:border light:border-purple-200">
             <TabsTrigger value="overview" className="text-cyan-400 dark:text-cyan-400 light:text-cyan-700 data-[state=active]:bg-gradient-to-r data-[state=active]:from-cyan-500/20 data-[state=active]:to-purple-500/20 data-[state=active]:text-cyan-300 dark:data-[state=active]:text-cyan-300 light:data-[state=active]:text-cyan-700 light:data-[state=active]:from-cyan-100 light:data-[state=active]:to-purple-100">
               {t('skills.tab.overview')}
             </TabsTrigger>
@@ -225,7 +225,7 @@ export function Skills() {
                   transition={{ duration: 0.5, delay: index * 0.05 }}
                   viewport={{ once: true }}
                 >
-                  <Card className={`p-6 bg-slate-800/50 dark:bg-slate-800/50 light:bg-white border-slate-700 dark:border-slate-700 light:border-purple-200 ${category.borderColor} transition-all duration-300 h-full group`}>
+                  <Card className={`p-6 bg-slate-800/50 dark:bg-slate-800/50 light:bg-white/80 light:shadow-sm border-slate-700 dark:border-slate-700 light:border-purple-200 ${category.borderColor} transition-all duration-300 h-full group`}>
                     <div className="flex items-center gap-3 mb-4">
                       <div className={`p-2 rounded-lg bg-gradient-to-br ${category.color} transition-colors`}>
                         <category.icon className={`w-5 h-5 ${category.iconColor}`} />
@@ -255,7 +255,7 @@ export function Skills() {
               animate={{ opacity: 1 }}
               transition={{ duration: 0.5 }}
             >
-              <Card className="p-8 bg-slate-800/50 dark:bg-slate-800/50 light:bg-white border-slate-700 dark:border-slate-700 light:border-purple-200">
+              <Card className="p-8 bg-slate-800/50 dark:bg-slate-800/50 light:bg-white/80 light:shadow-sm border-slate-700 dark:border-slate-700 light:border-purple-200">
                 <div className="flex items-center gap-3 mb-6">
                   <div className="p-3 rounded-lg bg-gradient-to-br from-green-500/10 to-emerald-500/10">
                     <Code2 className="w-6 h-6 text-green-400" />

@@ -9,7 +9,7 @@ export function ThemeSwitcher() {
   return (
     <button
       onClick={() => setTheme(resolvedTheme === 'dark' ? 'light' : 'dark')}
-      className="flex items-center gap-2 px-4 py-2 rounded-full bg-slate-800/50 dark:bg-slate-800/50 light:bg-white border border-slate-700 dark:border-slate-700 light:border-purple-300 hover:border-purple-400 transition-all shadow-sm"
+      className="flex items-center gap-2 px-4 py-2 rounded-full bg-slate-800/50 dark:bg-slate-800/50 light:bg-white/80 light:shadow-sm border border-slate-700 dark:border-slate-700 light:border-purple-300 hover:border-purple-400 transition-all shadow-sm"
       aria-label="Toggle theme"
     >
       {resolvedTheme === 'dark' ? (

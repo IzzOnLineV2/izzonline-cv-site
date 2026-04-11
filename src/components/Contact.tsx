@@ -60,7 +60,7 @@ export function Contact() {
   ];
 
   return (
-    <section id="contact" className="py-20 bg-slate-900/50 dark:bg-slate-900/50 light:bg-white/50">
+    <section id="contact" className="py-20 bg-slate-900/50 dark:bg-slate-900/50 light:bg-purple-50/80">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -87,7 +87,7 @@ export function Contact() {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
               >
-                <Card className={`p-6 bg-slate-800/50 dark:bg-slate-800/50 light:bg-white border-slate-700 dark:border-slate-700 light:border-purple-200 ${item.borderColor} transition-all duration-300 hover:shadow-lg`}>
+                <Card className={`p-6 bg-slate-800/50 dark:bg-slate-800/50 light:bg-white/80 light:shadow-sm border-slate-700 dark:border-slate-700 light:border-purple-200 ${item.borderColor} transition-all duration-300 hover:shadow-lg`}>
                   <div className="flex items-center gap-4">
                     <div className={`p-3 rounded-lg bg-gradient-to-br ${item.color}`}>
                       <item.icon className={`w-6 h-6 ${item.iconColor}`} />
