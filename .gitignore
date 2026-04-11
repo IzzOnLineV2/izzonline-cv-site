@@ -4,5 +4,12 @@
 # Dependencies
 node_modules/
 
+# Next.js
+.next/
+out/
+
 # Build output
 dist/
+
+# TypeScript
+next-env.d.ts

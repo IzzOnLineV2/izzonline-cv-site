@@ -1,6 +1,6 @@
 import { Download } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
-import { toast } from 'sonner@2.0.3';
+import { toast } from 'sonner';
 
 export function PDFExport() {
   const { t, language } = useLanguage();
