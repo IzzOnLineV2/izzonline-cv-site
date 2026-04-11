@@ -1,11 +1,21 @@
 import { motion } from 'motion/react';
 import { MapPin, Mail, Phone, ExternalLink, Github, Linkedin, MessageCircle, Facebook, Instagram } from 'lucide-react';
 import { Button } from './ui/button';
-const profileImage = 'https://survey.izzonline.it/assets/stefy.png';
+import { useLanguage } from '../contexts/LanguageContext';
+const profileImage = 'https://assets.izzonline.it/images/stefy.png';
 
 export function Hero() {
+  const { t } = useLanguage();
+  
   const scrollToContact = () => {
     const element = document.getElementById('contact');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  const scrollToExperience = () => {
+    const element = document.getElementById('experience');
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
     }
@@ -67,7 +77,7 @@ export function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3 }}
-              className="mb-4 bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent"
+              className="mb-4 bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 dark:from-cyan-400 dark:via-purple-500 dark:to-pink-500 light:from-cyan-600 light:via-purple-600 light:to-pink-600 bg-clip-text text-transparent"
             >
               STEFANIA IZZO
             </motion.h1>
@@ -78,15 +88,15 @@ export function Hero() {
               transition={{ delay: 0.4 }}
               className="mb-6"
             >
-              <p className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent mb-2">Senior Java Developer & AI Specialist</p>
-              <p className="text-slate-400">15+ Years of Enterprise Backend Excellence</p>
+              <p className="bg-gradient-to-r from-cyan-400 to-purple-400 dark:from-cyan-400 dark:to-purple-400 light:from-cyan-600 light:to-purple-600 bg-clip-text text-transparent mb-2">{t('hero.role')}</p>
+              <p className="text-slate-400 dark:text-slate-400 light:text-slate-600">{t('hero.subtitle')}</p>
             </motion.div>
 
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.5 }}
-              className="flex flex-wrap items-center justify-center gap-4 mb-8 text-slate-300"
+              className="flex flex-wrap items-center justify-center gap-4 mb-8 text-slate-300 dark:text-slate-300 light:text-slate-700"
             >
               <div className="flex items-center gap-2">
                 <MapPin size={18} className="text-pink-400" />
@@ -115,15 +125,14 @@ export function Hero() {
                   onClick={scrollToContact}
                   className="bg-gradient-to-r from-cyan-500 via-purple-500 to-pink-500 hover:from-cyan-600 hover:via-purple-600 hover:to-pink-600 text-white shadow-lg shadow-purple-500/50"
                 >
-                  Get in Touch
+                  {t('hero.cta.contact')}
                 </Button>
                 <Button
                   variant="outline"
                   className="border-purple-400 text-purple-400 hover:bg-purple-400/10"
-                  onClick={() => window.open('https://wa.me/393391876363', '_blank')}
+                  onClick={scrollToExperience}
                 >
-                  <MessageCircle size={18} className="mr-2" />
-                  WhatsApp Me
+                  {t('hero.cta.experience')}
                 </Button>
               </div>
 
@@ -133,7 +142,7 @@ export function Hero() {
                   href="https://www.linkedin.com/in/st3fania/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-2 rounded-full bg-slate-800/50 border border-slate-700 hover:border-cyan-400 hover:bg-cyan-400/10 transition-all text-slate-400 hover:text-cyan-400"
+                  className="p-2 rounded-full bg-slate-800/50 dark:bg-slate-800/50 light:bg-purple-100 border border-slate-700 dark:border-slate-700 light:border-purple-300 hover:border-cyan-400 hover:bg-cyan-400/10 transition-all text-slate-400 dark:text-slate-400 light:text-slate-600 hover:text-cyan-400"
                 >
                   <Linkedin size={20} />
                 </a>
@@ -141,7 +150,7 @@ export function Hero() {
                   href="https://github.com/IzzOnLineV2"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-2 rounded-full bg-slate-800/50 border border-slate-700 hover:border-purple-400 hover:bg-purple-400/10 transition-all text-slate-400 hover:text-purple-400"
+                  className="p-2 rounded-full bg-slate-800/50 dark:bg-slate-800/50 light:bg-purple-100 border border-slate-700 dark:border-slate-700 light:border-purple-300 hover:border-purple-400 hover:bg-purple-400/10 transition-all text-slate-400 dark:text-slate-400 light:text-slate-600 hover:text-purple-400"
                 >
                   <Github size={20} />
                 </a>
@@ -149,7 +158,7 @@ export function Hero() {
                   href="https://www.facebook.com/izzonline"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-2 rounded-full bg-slate-800/50 border border-slate-700 hover:border-pink-400 hover:bg-pink-400/10 transition-all text-slate-400 hover:text-pink-400"
+                  className="p-2 rounded-full bg-slate-800/50 dark:bg-slate-800/50 light:bg-purple-100 border border-slate-700 dark:border-slate-700 light:border-purple-300 hover:border-pink-400 hover:bg-pink-400/10 transition-all text-slate-400 dark:text-slate-400 light:text-slate-600 hover:text-pink-400"
                 >
                   <Facebook size={20} />
                 </a>
@@ -157,7 +166,7 @@ export function Hero() {
                   href="https://www.instagram.com/izzonline"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-2 rounded-full bg-slate-800/50 border border-slate-700 hover:border-rose-400 hover:bg-rose-400/10 transition-all text-slate-400 hover:text-rose-400"
+                  className="p-2 rounded-full bg-slate-800/50 dark:bg-slate-800/50 light:bg-purple-100 border border-slate-700 dark:border-slate-700 light:border-purple-300 hover:border-rose-400 hover:bg-rose-400/10 transition-all text-slate-400 dark:text-slate-400 light:text-slate-600 hover:text-rose-400"
                 >
                   <Instagram size={20} />
                 </a>

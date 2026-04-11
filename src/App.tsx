@@ -1,5 +1,7 @@
 import { useState, useEffect } from 'react';
 import { motion } from 'motion/react';
+import { LanguageProvider } from './contexts/LanguageContext';
+import { ThemeProvider } from './contexts/ThemeContext';
 import { Header } from './components/Header';
 import { Hero } from './components/Hero';
 import { Summary } from './components/Summary';
@@ -7,7 +9,7 @@ import { Skills } from './components/Skills';
 import { Experience } from './components/Experience';
 import { Contact } from './components/Contact';
 import { Toaster } from './components/ui/sonner';
-const faviconImage = 'https://images.unsplash.com/photo-1649091245850-71ad5a18e117?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkZXZlbG9wZXIlMjBpY29uJTIwbG9nb3xlbnwxfHx8fDE3NjI4NTE0NzJ8MA&ixlib=rb-4.1.0&q=80&w=1080';
+const faviconImage = 'https://assets.izzonline.it/images/logo.png';
 
 export default function App() {
   const [activeSection, setActiveSection] = useState('home');
@@ -43,16 +45,20 @@ export default function App() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-purple-950 to-slate-950 text-slate-100">
-      <Header activeSection={activeSection} />
-      <main>
-        <Hero />
-        <Summary />
-        <Skills />
-        <Experience />
-        <Contact />
-      </main>
-      <Toaster />
-    </div>
+    <LanguageProvider>
+      <ThemeProvider>
+        <div className="min-h-screen bg-gradient-to-br from-slate-950 via-purple-950 to-slate-950 text-slate-100 dark:bg-gradient-to-br dark:from-slate-950 dark:via-purple-950 dark:to-slate-950 dark:text-slate-100 light:bg-gradient-to-br light:from-white light:via-purple-50/30 light:to-pink-50/30 light:text-slate-900">
+          <Header activeSection={activeSection} />
+          <main>
+            <Hero />
+            <Summary />
+            <Skills />
+            <Experience />
+            <Contact />
+          </main>
+          <Toaster />
+        </div>
+      </ThemeProvider>
+    </LanguageProvider>
   );
 }

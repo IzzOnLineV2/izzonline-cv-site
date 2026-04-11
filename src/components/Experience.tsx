@@ -2,36 +2,39 @@ import { motion } from 'motion/react';
 import { Card } from './ui/card';
 import { Badge } from './ui/badge';
 import { Briefcase, Calendar, MapPin } from 'lucide-react';
+import { useLanguage } from '../contexts/LanguageContext';
 
 export function Experience() {
+  const { t } = useLanguage();
+  
   const experiences = [
     {
       company: 'IzzOnLine',
-      role: 'Freelance Java Backend Developer',
-      period: '2018 - Present',
-      location: 'Italy',
-      description: 'Working as a freelance Java Backend Developer, supporting various companies in the design and development of enterprise applications and distributed systems. Contributed to mission-critical projects in finance, insurance, and cybersecurity sectors.',
+      role: 'Senior Java Developer & DevOps',
+      period: 'Sep 2018 - Present · 7 yrs 3 mos',
+      location: 'Bergamo Area, Italy',
+      description: t('exp.izzonline.desc'),
       highlights: [
-        'Designed microservices-based systems following Hexagonal Architecture and DDD principles',
-        'Developed AI-powered REST APIs using Spring AI with LLM providers (OpenAI, Ollama)',
-        'Implemented Saga pattern and event-driven architectures for distributed transactions',
-        'Engineered plugin-based modular architecture with dynamic JAR loading and SPI integration',
-        'Integrated secure authentication flows using Keycloak, OAuth2, SAML2, JWT, and LDAP',
-        'Built CI/CD pipelines and orchestrated containerized deployments via Docker, Kubernetes, Helm',
+        t('exp.izzonline.h1'),
+        t('exp.izzonline.h2'),
+        t('exp.izzonline.h3'),
+        t('exp.izzonline.h4'),
+        t('exp.izzonline.h5'),
+        t('exp.izzonline.h6'),
       ],
-      technologies: ['Spring Boot', 'Microservices', 'Docker', 'Kubernetes', 'Spring AI', 'Kafka', 'PostgreSQL'],
+      technologies: ['Spring Boot', 'Spring AI', 'Microservices', 'Docker', 'Kubernetes', 'Kafka', 'PostgreSQL', 'Model Context Protocol'],
     },
     {
       company: 'AGM Solutions (for Generali Assicurazioni)',
       role: 'Team Leader & Technical Ambassador',
       period: '2019 - Present',
       location: 'Italy',
-      description: 'Leading a cybersecurity project focusing on vulnerability assessment and management, including assessment questionnaire and incident management tools.',
+      description: t('exp.agm.desc'),
       highlights: [
-        'Led team as Technical Coordinator for cybersecurity domain project',
-        'Set up CI/CD pipelines for Windows/Wildfly and Linux/Kubernetes environments',
-        'Integrated with external systems (Qualys, Namirial, Archer, ServiceNow) via REST and SOAP',
-        'Configured GitLab CI with gitlab-runner and container orchestration',
+        t('exp.agm.h1'),
+        t('exp.agm.h2'),
+        t('exp.agm.h3'),
+        t('exp.agm.h4'),
       ],
       technologies: ['Spring Boot 2', 'JPA', 'Hibernate', 'QueryDSL', 'PostgreSQL', 'Wildfly', 'ActiveMQ', 'Flowable BPMN', 'Docker', 'Kubernetes', 'GitLab CI/CD'],
     },
@@ -40,10 +43,10 @@ export function Experience() {
       role: 'Backend Developer',
       period: '2018 - 2019',
       location: 'Milan, Italy',
-      description: 'Involved in PSD2 (Payment Service Directive) project implementation.',
+      description: t('exp.deutsche.desc'),
       highlights: [
-        'Developed PSD2 compliant payment services',
-        'Worked with cloud technologies and serverless architecture',
+        t('exp.deutsche.h1'),
+        t('exp.deutsche.h2'),
       ],
       technologies: ['Spring Boot 2', 'JPA', 'Oracle', 'Angular 6', 'JHipster 5', 'OpenShift', 'AWS Lambda', 'DynamoDB'],
     },
@@ -52,12 +55,12 @@ export function Experience() {
       role: 'Java Developer & Technical Lead',
       period: '2007 - 2018',
       location: 'Italy',
-      description: 'Participated in numerous internal and IT consultant projects, including development of internal software suites and major financial sector applications.',
+      description: t('exp.sorint.desc'),
       highlights: [
-        'Developed portfolio application for London Stock Exchange and Bit Market Services',
-        'Supervised and managed minor projects as PM',
-        'Taught Java, Spring Framework, Hibernate, and jQuery to new employees',
-        'Built activity planning and assignment modules',
+        t('exp.sorint.h1'),
+        t('exp.sorint.h2'),
+        t('exp.sorint.h3'),
+        t('exp.sorint.h4'),
       ],
       technologies: ['Java 1.8', 'Spring 4.x', 'Hibernate 4.x', 'Apache Solr', 'Mule', 'Liferay 7', 'jQuery', 'Tomcat 8'],
     },
@@ -68,28 +71,28 @@ export function Experience() {
       company: 'MBE - Mail Boxes Etc.',
       role: 'Developer',
       period: '2016 - 2017',
-      description: 'Developed centralized billing tool for company branches',
+      description: t('exp.mbe.desc'),
       technologies: ['Java 8', 'Spring Boot', 'Spring Security', 'JWT', 'JPA', 'Angular JS'],
     },
     {
       company: 'SKY Italia',
       role: 'Developer',
       period: '2015',
-      description: 'Developed encrypted password storage tool for Sky Italia systems',
+      description: t('exp.sky.desc'),
       technologies: ['Java 8', 'Spring Web MVC', 'Spring Security', 'Hibernate 4', 'jQuery'],
     },
     {
       company: 'UBI Sistemi e Servizi',
       role: 'Developer',
       period: '2014',
-      description: 'Performance improvement and technology modernization of existing applications',
+      description: t('exp.ubi.desc'),
       technologies: ['Oracle APEX', 'PL/SQL', 'Spring 3.2', 'Bootstrap 3', 'jQuery'],
     },
     {
       company: 'Borsa Italiana',
       role: 'Developer',
       period: '2011',
-      description: 'Development and integration of web applications for London Stock Exchange',
+      description: t('exp.borsa.desc'),
       technologies: ['Java 1.5', 'Spring 2', 'Hibernate 3', 'Apache Solr', 'Lucene', 'Oracle PL/SQL'],
     },
   ];
@@ -104,12 +107,12 @@ export function Experience() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <Badge className="mb-4 bg-pink-500/10 text-pink-400 border-pink-400/50">Career Journey</Badge>
-          <h2 className="mb-4 bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
-            Professional Experience
+          <Badge className="mb-4 bg-pink-500/10 text-pink-400 border-pink-400/50 dark:bg-pink-500/10 dark:text-pink-400 dark:border-pink-400/50 light:bg-pink-200 light:text-pink-800 light:border-pink-400">{t('experience.badge')}</Badge>
+          <h2 className="mb-4 bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 dark:from-cyan-400 dark:via-purple-500 dark:to-pink-500 light:from-cyan-600 light:via-purple-600 light:to-pink-600 bg-clip-text text-transparent">
+            {t('experience.title')}
           </h2>
-          <p className="text-slate-400 max-w-2xl mx-auto">
-            15+ years of delivering enterprise-grade solutions across finance, insurance, and cybersecurity sectors
+          <p className="text-slate-400 dark:text-slate-400 light:text-slate-600 max-w-2xl mx-auto">
+            {t('experience.subtitle')}
           </p>
         </motion.div>
 
@@ -129,13 +132,13 @@ export function Experience() {
                 className="relative mb-8 md:ml-20"
               >
                 {/* Timeline dot */}
-                <div className={`hidden md:block absolute -left-[52px] top-6 w-4 h-4 rounded-full border-4 border-slate-950 ${
+                <div className={`hidden md:block absolute -left-[52px] top-6 w-4 h-4 rounded-full border-4 border-slate-950 dark:border-slate-950 light:border-white ${
                   index % 4 === 0 ? 'bg-cyan-400' :
                   index % 4 === 1 ? 'bg-purple-400' :
                   index % 4 === 2 ? 'bg-pink-400' : 'bg-emerald-400'
                 }`} />
 
-                <Card className={`p-6 bg-slate-800/50 border-slate-700 transition-all duration-300 hover:shadow-lg ${
+                <Card className={`p-6 bg-slate-800/50 dark:bg-slate-800/50 light:bg-white border-slate-700 dark:border-slate-700 light:border-purple-200 transition-all duration-300 hover:shadow-lg ${
                   index % 4 === 0 ? 'hover:border-cyan-400/50 hover:shadow-cyan-500/10' :
                   index % 4 === 1 ? 'hover:border-purple-400/50 hover:shadow-purple-500/10' :
                   index % 4 === 2 ? 'hover:border-pink-400/50 hover:shadow-pink-500/10' : 'hover:border-emerald-400/50 hover:shadow-emerald-500/10'
@@ -147,12 +150,12 @@ export function Experience() {
                         index % 4 === 1 ? 'text-purple-400' :
                         index % 4 === 2 ? 'text-pink-400' : 'text-emerald-400'
                       }`}>{exp.role}</h3>
-                      <div className="flex items-center gap-2 text-slate-300 mb-2">
+                      <div className="flex items-center gap-2 text-slate-300 dark:text-slate-300 light:text-slate-700 mb-2">
                         <Briefcase size={16} />
                         <span>{exp.company}</span>
                       </div>
                     </div>
-                    <div className="flex flex-col gap-1 text-slate-400">
+                    <div className="flex flex-col gap-1 text-slate-400 dark:text-slate-400 light:text-slate-600">
                       <div className="flex items-center gap-2">
                         <Calendar size={14} />
                         <span>{exp.period}</span>
@@ -164,12 +167,70 @@ export function Experience() {
                     </div>
                   </div>
 
-                  <p className="text-slate-300 mb-4">{exp.description}</p>
+                  <p className="text-slate-300 dark:text-slate-300 light:text-slate-700 mb-4">
+                    {(() => {
+                      let text = exp.description;
+                      const parts: (string | JSX.Element)[] = [];
+                      let key = 0;
+                      
+                      // First, handle the first occurrence of SmartApiBox with link
+                      const firstSmartApiBoxIndex = text.indexOf('SmartApiBox');
+                      if (firstSmartApiBoxIndex !== -1) {
+                        parts.push(text.substring(0, firstSmartApiBoxIndex));
+                        parts.push(
+                          <a 
+                            key={key++}
+                            href="https://smartapibox.com" 
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                            className="text-cyan-400 hover:text-cyan-300 underline decoration-cyan-400/50 hover:decoration-cyan-300 transition-colors"
+                          >
+                            SmartApiBox
+                          </a>
+                        );
+                        text = text.substring(firstSmartApiBoxIndex + 'SmartApiBox'.length);
+                      }
+                      
+                      // Handle whatschat.smartapibox.com
+                      let currentText = text;
+                      while (currentText.length > 0) {
+                        const whatschatIndex = currentText.indexOf('whatschat.smartapibox.com');
+                        const quizforgeIndex = currentText.indexOf('quizforge.smartapibox.com');
+                        
+                        if (whatschatIndex === -1 && quizforgeIndex === -1) {
+                          parts.push(currentText);
+                          break;
+                        }
+                        
+                        const nextIndex = whatschatIndex !== -1 && (quizforgeIndex === -1 || whatschatIndex < quizforgeIndex) 
+                          ? whatschatIndex 
+                          : quizforgeIndex;
+                        const isWhatschat = nextIndex === whatschatIndex;
+                        const domain = isWhatschat ? 'whatschat.smartapibox.com' : 'quizforge.smartapibox.com';
+                        
+                        parts.push(currentText.substring(0, nextIndex));
+                        parts.push(
+                          <a 
+                            key={key++}
+                            href={`https://${domain}`}
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                            className="text-cyan-400 hover:text-cyan-300 underline decoration-cyan-400/50 hover:decoration-cyan-300 transition-colors"
+                          >
+                            {domain}
+                          </a>
+                        );
+                        currentText = currentText.substring(nextIndex + domain.length);
+                      }
+                      
+                      return parts;
+                    })()}
+                  </p>
 
                   {exp.highlights && (
                     <ul className="space-y-2 mb-4">
                       {exp.highlights.map((highlight, i) => (
-                        <li key={i} className="flex items-start gap-2 text-slate-400">
+                        <li key={i} className="flex items-start gap-2 text-slate-400 dark:text-slate-400 light:text-slate-600">
                           <span className={`mt-1 ${
                             index % 4 === 0 ? 'text-cyan-400' :
                             index % 4 === 1 ? 'text-purple-400' :
@@ -186,7 +247,7 @@ export function Experience() {
                       <Badge
                         key={i}
                         variant="outline"
-                        className="border-slate-600 text-slate-300 hover:border-cyan-400/50 hover:text-cyan-400 transition-colors"
+                        className="border-slate-600 dark:border-slate-600 light:border-purple-300 text-slate-300 dark:text-slate-300 light:text-purple-700 hover:border-cyan-400/50 hover:text-cyan-400 transition-colors"
                       >
                         {tech}
                       </Badge>
@@ -205,7 +266,7 @@ export function Experience() {
             viewport={{ once: true }}
             className="mt-16"
           >
-            <h3 className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent mb-6 text-center">Additional Projects & Clients</h3>
+            <h3 className="bg-gradient-to-r from-purple-400 to-pink-400 dark:from-purple-400 dark:to-pink-400 light:from-purple-600 light:to-pink-600 bg-clip-text text-transparent mb-6 text-center">{t('experience.additional')}</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {otherProjects.map((project, index) => (
                 <motion.div
@@ -215,18 +276,18 @@ export function Experience() {
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   viewport={{ once: true }}
                 >
-                  <Card className="p-4 bg-slate-800/30 border-slate-700 hover:border-cyan-400/30 transition-all duration-300 h-full">
+                  <Card className="p-4 bg-slate-800/30 dark:bg-slate-800/30 light:bg-purple-50 border-slate-700 dark:border-slate-700 light:border-purple-200 hover:border-cyan-400/30 transition-all duration-300 h-full">
                     <div className="flex items-start justify-between mb-2">
-                      <h4 className="text-slate-200">{project.company}</h4>
-                      <span className="text-slate-500">{project.period}</span>
+                      <h4 className="text-slate-200 dark:text-slate-200 light:text-slate-800">{project.company}</h4>
+                      <span className="text-slate-500 dark:text-slate-500 light:text-slate-600">{project.period}</span>
                     </div>
-                    <p className="text-slate-400 mb-3">{project.description}</p>
+                    <p className="text-slate-400 dark:text-slate-400 light:text-slate-600 mb-3">{project.description}</p>
                     <div className="flex flex-wrap gap-2">
                       {project.technologies.map((tech, i) => (
                         <Badge
                           key={i}
                           variant="outline"
-                          className="border-slate-700 text-slate-400"
+                          className="border-slate-700 dark:border-slate-700 light:border-purple-300 text-slate-400 dark:text-slate-400 light:text-purple-700"
                         >
                           {tech}
                         </Badge>

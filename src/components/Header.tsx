@@ -1,6 +1,10 @@
 import { useState, useEffect } from 'react';
 import { motion } from 'motion/react';
 import { Menu, X } from 'lucide-react';
+import { useLanguage } from '../contexts/LanguageContext';
+import { LanguageSwitcher } from './LanguageSwitcher';
+import { ThemeSwitcher } from './ThemeSwitcher';
+import { PDFExport } from './PDFExport';
 
 interface HeaderProps {
   activeSection: string;
@@ -9,6 +13,7 @@ interface HeaderProps {
 export function Header({ activeSection }: HeaderProps) {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const { t } = useLanguage();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -27,11 +32,11 @@ export function Header({ activeSection }: HeaderProps) {
   };
 
   const navItems = [
-    { id: 'home', label: 'Home' },
-    { id: 'about', label: 'About' },
-    { id: 'skills', label: 'Skills' },
-    { id: 'experience', label: 'Experience' },
-    { id: 'contact', label: 'Contact' },
+    { id: 'home', label: t('nav.home') },
+    { id: 'about', label: t('nav.about') },
+    { id: 'skills', label: t('nav.skills') },
+    { id: 'experience', label: t('nav.experience') },
+    { id: 'contact', label: t('nav.contact') },
   ];
 
   return (
@@ -39,7 +44,9 @@ export function Header({ activeSection }: HeaderProps) {
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-slate-950/95 backdrop-blur-md shadow-lg' : 'bg-transparent'
+        isScrolled 
+          ? 'bg-slate-950/95 dark:bg-slate-950/95 light:bg-white/95 backdrop-blur-md shadow-lg dark:shadow-lg light:shadow-purple-200/50' 
+          : 'bg-transparent'
       }`}
     >
       <div className="container mx-auto px-4 py-4">
@@ -51,9 +58,11 @@ export function Header({ activeSection }: HeaderProps) {
             className="cursor-pointer"
             onClick={() => scrollToSection('home')}
           >
-            <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
-              SI
-            </span>
+            <img 
+              src="https://assets.izzonline.it/images/logo.png" 
+              alt="IzzOnLine Logo" 
+              className="h-10 w-auto"
+            />
           </motion.div>
 
           {/* Desktop Navigation */}
@@ -66,23 +75,22 @@ export function Header({ activeSection }: HeaderProps) {
                 transition={{ delay: 0.1 * index }}
                 onClick={() => scrollToSection(item.id)}
                 className={`relative transition-colors ${
-                  activeSection === item.id ? 'text-transparent bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text' : 'text-slate-300 hover:text-cyan-400'
+                  activeSection === item.id 
+                    ? 'text-transparent bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text' 
+                    : 'text-slate-300 dark:text-slate-300 light:text-slate-700 hover:text-cyan-400 dark:hover:text-cyan-400 light:hover:text-purple-600'
                 }`}
               >
                 {item.label}
-                {activeSection === item.id && (
-                  <motion.div
-                    layoutId="activeSection"
-                    className="absolute -bottom-1 left-0 right-0 h-0.5 bg-gradient-to-r from-cyan-400 to-purple-400"
-                  />
-                )}
               </motion.button>
             ))}
+            <LanguageSwitcher />
+            <ThemeSwitcher />
+            <PDFExport />
           </nav>
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden text-slate-300"
+            className="md:hidden text-slate-300 dark:text-slate-300 light:text-slate-700"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
             {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -103,13 +111,19 @@ export function Header({ activeSection }: HeaderProps) {
                 onClick={() => scrollToSection(item.id)}
                 className={`block w-full text-left py-2 px-4 rounded transition-colors ${
                   activeSection === item.id
-                    ? 'text-cyan-400 bg-cyan-400/10'
-                    : 'text-slate-300 hover:text-cyan-400 hover:bg-slate-800/50'
+                    ? 'text-cyan-400 dark:text-cyan-400 light:text-purple-600 bg-cyan-400/10 dark:bg-cyan-400/10 light:bg-purple-100'
+                    : 'text-slate-300 dark:text-slate-300 light:text-slate-700 hover:text-cyan-400 dark:hover:text-cyan-400 light:hover:text-purple-600 hover:bg-slate-800/50 dark:hover:bg-slate-800/50 light:hover:bg-purple-50'
                 }`}
               >
                 {item.label}
               </button>
             ))}
+            <div className="mt-4 px-4">
+              <LanguageSwitcher />
+              <div className="mt-2">
+                <ThemeSwitcher />
+              </div>
+            </div>
           </motion.nav>
         )}
       </div>

@@ -1,4 +1,5 @@
 @custom-variant dark (&:is(.dark *));
+@custom-variant light (&:is(.light *));
 
 :root {
   --font-size: 16px;
@@ -127,6 +128,12 @@
   body {
     @apply bg-background text-foreground;
   }
+  
+  /* Cursor pointer for all links and buttons */
+  a,
+  button {
+    cursor: pointer;
+  }
 }
 
 /**
@@ -186,4 +193,78 @@
 
 html {
   font-size: var(--font-size);
+}
+
+/* Print styles for PDF export */
+@media print {
+  /* Hide navigation and interactive elements */
+  header,
+  .pdf-export-button,
+  .language-switcher,
+  .theme-switcher,
+  button[class*="hover"],
+  nav {
+    display: none !important;
+  }
+
+  /* Reset background and colors for print */
+  * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+    color-adjust: exact !important;
+  }
+
+  body {
+    background: white !important;
+    color: #1e293b !important;
+  }
+
+  main {
+    background: white !important;
+  }
+
+  /* Ensure cards and sections are visible */
+  .card,
+  [class*="card"],
+  section {
+    background: white !important;
+    border: 1px solid #e2e8f0 !important;
+    page-break-inside: avoid;
+  }
+
+  /* Fix text colors for readability */
+  h1, h2, h3, h4, h5, h6, p, span, li, a {
+    color: #1e293b !important;
+  }
+
+  /* Keep gradient text visible */
+  .bg-clip-text {
+    -webkit-text-fill-color: #7c3aed !important;
+    background: none !important;
+  }
+
+  /* Ensure images are visible */
+  img {
+    max-width: 100% !important;
+    page-break-inside: avoid;
+  }
+
+  /* Remove shadows and transitions */
+  * {
+    box-shadow: none !important;
+    transition: none !important;
+    animation: none !important;
+  }
+
+  /* Page settings */
+  @page {
+    margin: 1cm;
+    size: A4;
+  }
+
+  /* Prevent page breaks in important sections */
+  .experience-item,
+  .skill-category {
+    page-break-inside: avoid;
+  }
 }
