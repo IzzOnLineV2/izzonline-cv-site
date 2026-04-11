@@ -1,2 +1,8 @@
 # Evita file di sistema macOS
 **/.DS_Store
+
+# Dependencies
+node_modules/
+
+# Build output
+dist/
