@@ -2,6 +2,7 @@ import { motion } from 'motion/react';
 import { MapPin, Mail, Phone, ExternalLink, Github, Linkedin, MessageCircle, Facebook, Instagram } from 'lucide-react';
 import { Button } from './ui/button';
 import { useLanguage } from '../contexts/LanguageContext';
+import { ParticleNetwork } from './ParticleNetwork';
 const profileImage = 'https://assets.izzonline.it/images/stefy.png';
 
 export function Hero() {
@@ -23,15 +24,19 @@ export function Hero() {
 
   return (
     <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden pt-20">
-      {/* Animated Background Elements */}
+      {/* Animated Background */}
       <div className="absolute inset-0 overflow-hidden">
+        {/* Particle Network */}
+        <ParticleNetwork />
+
+        {/* Gradient Blobs */}
         <motion.div
           animate={{
             scale: [1, 1.2, 1],
             rotate: [0, 90, 0],
           }}
           transition={{ duration: 20, repeat: Infinity }}
-          className="absolute top-1/4 left-1/4 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl"
+          className="absolute top-1/4 left-1/4 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl pointer-events-none"
         />
         <motion.div
           animate={{
@@ -39,7 +44,7 @@ export function Hero() {
             rotate: [0, -90, 0],
           }}
           transition={{ duration: 25, repeat: Infinity }}
-          className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl"
+          className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl pointer-events-none"
         />
         <motion.div
           animate={{
@@ -47,7 +52,7 @@ export function Hero() {
             rotate: [0, 180, 0],
           }}
           transition={{ duration: 30, repeat: Infinity }}
-          className="absolute top-1/2 left-1/2 w-96 h-96 bg-pink-500/10 rounded-full blur-3xl"
+          className="absolute top-1/2 left-1/2 w-96 h-96 bg-pink-500/10 rounded-full blur-3xl pointer-events-none"
         />
       </div>
 
