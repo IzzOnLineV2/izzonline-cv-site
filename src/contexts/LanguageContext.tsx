@@ -17,12 +17,13 @@ export const translations = {
     'nav.about': 'About',
     'nav.skills': 'Skills',
     'nav.experience': 'Experience',
+    'nav.education': 'Education',
     'nav.contact': 'Contact',
     
     // Hero
     'hero.greeting': 'Hi, I\'m',
-    'hero.role': 'AI/ML Engineer & Senior Java Backend',
-    'hero.subtitle': 'Building AI APIs & Products with LLMs (Spring AI, OpenAI, Java/Python)',
+    'hero.role': 'AI Platform Architect & Senior Java Engineer',
+    'hero.subtitle': 'Building AI APIs & production-ready AI products (LLMs, Spring AI, OpenAI, Java/Python)',
     'hero.cta.contact': 'Get in Touch',
     'hero.cta.experience': 'View Experience',
     
@@ -57,7 +58,7 @@ export const translations = {
     'experience.additional': 'Additional Projects & Clients',
     
     // IzzOnLine
-    'exp.izzonline.desc': 'Since 2018, I work as a freelance Java Backend Developer, supporting various companies in the design and development of enterprise applications and distributed systems. Over the years I have consolidated solid technical, architectural and leadership skills, contributing to the delivery of mission-critical solutions in the finance, insurance and cybersecurity sectors. In parallel, I designed and built SmartApiBox (currently in Early Preview), a multi-module Java/Spring Boot platform developed entirely in my spare time. The platform integrates: plugin-based architecture for AI service orchestration, advanced authentication (JWT + OAuth2), Stripe integration for subscription and consumption billing, extensible plugin system through an SDK published on Maven Central, configurable API keys with support for multiple AI models (OpenAI GPT, Llama, etc.), a dedicated sandbox environment for third-party developers to create, test and publish plugins securely, cross-service workflows coordinated with the Saga pattern, ensuring consistency and reliability, AI plugins exposed both as REST APIs and MCP Tools, including a dedicated bridge for compatibility with Claude Desktop. SmartApiBox is a developer-first platform that enables building, deploying and monetizing AI-powered APIs in minutes, completely abstracting infrastructural complexity, billing and scalability. APIs become true standalone products, exposed through dedicated domains like whatschat.smartapibox.com or quizforge.smartapibox.com.',
+    'exp.izzonline.desc': 'Since 2018, I work as a freelance Java Backend Developer, supporting various companies in the design and development of enterprise applications and distributed systems. Over the years I have consolidated solid technical, architectural and leadership skills, contributing to the delivery of mission-critical solutions in the finance, insurance and cybersecurity sectors. In parallel, I designed and built SmartApiBox, a multi-module Java/Spring Boot platform developed entirely in my spare time. The platform integrates: plugin-based architecture for AI service orchestration, advanced authentication (JWT + OAuth2), Stripe integration for subscription and consumption billing, extensible plugin system through an SDK published on Maven Central, configurable API keys with support for multiple AI models (OpenAI GPT, Llama, etc.), a dedicated sandbox environment for third-party developers to create, test and publish plugins securely, cross-service workflows coordinated with the Saga pattern, ensuring consistency and reliability, AI plugins exposed both as REST APIs and MCP Tools, including a dedicated bridge for compatibility with Claude Desktop. SmartApiBox is a developer-first platform that enables building, deploying and monetizing AI-powered APIs in minutes, completely abstracting infrastructural complexity, billing and scalability. APIs become true standalone products, exposed through dedicated domains like smartqrbox.com, whatschat.smartapibox.com or quizforge.smartapibox.com. I also developed a hybrid (iOS/Android) Flutter app to organize 5-a-side football matches: Football Metchy, and I\'m building a native Swift app for iPad/iPhone: CodePilot, a mini IDE to develop on iPad with integrated AI Agents.',
     'exp.izzonline.h1': 'Developed AI-based REST APIs using Spring AI, Model Context Protocol (MCP) and LLM providers like OpenAI and Ollama',
     'exp.izzonline.h2': 'Adopted Saga patterns and event-driven architectures to orchestrate distributed workflows',
     'exp.izzonline.h3': 'Designed modular plugin-based architectures with dynamic discovery, versioning and sandbox/production isolation',
@@ -65,7 +66,29 @@ export const translations = {
     'exp.izzonline.h5': 'Built CI/CD pipelines through GitLab and deployment of containerized workloads with Docker, Kubernetes and Helm',
     'exp.izzonline.h6': 'Designed and optimized multi-tenant backend platforms with advanced usage tracking, caching and granular access control',
     
-    // AGM Solutions
+    // AGM Solutions (for Engineering) – LNG Decision Support
+    'exp.agmlng.desc': 'Design and development of a decision support platform for LNG operations optimization, designed as a foundation for advanced forecasting and optimization models.',
+    'exp.agmlng.h1': 'Definition and implementation of a simulation engine (Python) for LNG cargo planning, managing real-world constraints (capacity, berth availability, maintenance windows, regasification rates)',
+    'exp.agmlng.h2': 'Development of a Java backend (Spring Boot) for simulation orchestration and enterprise data integration (SQL Server), exposing REST APIs for what-if scenarios',
+    'exp.agmlng.h3': 'Design of a realistic simulation model based on multi-day unloading and dynamic inventory, foundation for forecasting and optimization models',
+    'exp.agmlng.h4': 'Implementation of cumulative scenario analysis (baseline vs scenario) with support for progressive decisions (add, edit, replan, override)',
+    'exp.agmlng.h5': 'Development of an interactive dashboard (Next.js, TypeScript) for real-time visualization and decision explainability',
+    'exp.agmlng.h6': 'Architecture designed for the integration of ML models (demand forecasting, multi-objective optimization) and digital twin simulations',
+    'exp.agmlng.h7': 'Collaboration with business stakeholders and Engineering teams for model validation and alignment with real operational constraints',
+
+    // AGM Solutions (for Engineering) – NCIS Gas
+    'exp.agmeng.desc': 'Developed one of the core microservices of the NCIS (National Comprehensive Information System) for the operational management of the natural gas transmission network, covering the full lifecycle of energy transactions and nominations.',
+    'exp.agmeng.h1': 'Design and development of a Java enterprise microservice (Java 21, Spring Boot 3.x) for managing gas flows (buy/sell), hourly nominations and energy allocations',
+    'exp.agmeng.h2': 'Modeling and orchestration of the complete nomination lifecycle (NOMINT, DELORD) with multi-version XML support, XSD validation and evolutionary format management',
+    'exp.agmeng.h3': 'Real-time integration with SCADA systems for metering data acquisition and calculation of imbalances, DIP allocations and operational pricing',
+    'exp.agmeng.h4': 'Integration with European market platforms (RBP, PRISMA) via REST APIs and asynchronous flows, ensuring data consistency and synchronization',
+    'exp.agmeng.h5': 'Implementation of cluster-aware distributed jobs (Quartz + ShedLock) for XML polling, external system synchronization and real-time notifications',
+    'exp.agmeng.h6': 'Inter-service communication via Spring Cloud OpenFeign to core microservices',
+    'exp.agmeng.h7': 'Enterprise security implementation with OAuth2 (client credentials) and AWS Cognito federation, with JWT validation and multi-tenant management',
+    'exp.agmeng.h8': 'Complete audit trail via Hibernate Envers and real-time notifications via WebSocket (STOMP/SockJS)',
+    'exp.agmeng.h9': 'Document management (XML/CSV/Excel) with Apache POI and versioning on S3',
+
+    // AGM Solutions (for Generali)
     'exp.agm.desc': 'Team Leader of a cybersecurity project focused on vulnerability assessment and management, including questionnaire assessment systems, remediation flows and security incident management tools.',
     'exp.agm.h1': 'Technical team coordination and supervision of the entire project in the cybersecurity domain, ensuring quality, security and operational continuity',
     'exp.agm.h2': 'Design and configuration of CI/CD pipelines for heterogeneous environments: Windows/WildFly stack and Linux/Kubernetes platform',
@@ -89,7 +112,13 @@ export const translations = {
     'exp.sky.desc': 'Developed encrypted password storage tool for Sky Italia systems',
     'exp.ubi.desc': 'Performance improvement and technology modernization of existing applications',
     'exp.borsa.desc': 'Development and integration of web applications for London Stock Exchange',
-    
+
+    // Education
+    'education.badge': 'Education',
+    'education.title': 'Education',
+    'edu.zenale.degree': 'Diploma in Business Management Operator',
+    'edu.paleocapa.degree': 'Diploma in Computer Science',
+
     // Contact
     'contact.badge': 'Get in Touch',
     'contact.title': 'Let\'s Work Together',
@@ -98,6 +127,7 @@ export const translations = {
     'contact.email': 'Email',
     'contact.social': 'Connect on Social Media',
     'contact.footer.rights': 'All rights reserved.',
+    'contact.qr.alt': 'QR code to contact Stefania Izzo',
     'contact.cta.title': 'Ready to collaborate?',
     'contact.cta.text': 'I\'m currently available for freelance projects and consulting opportunities. Whether you need help with microservices architecture, AI integration, or enterprise backend development, I\'d love to hear from you.',
     
@@ -117,12 +147,13 @@ export const translations = {
     'nav.about': 'Chi Sono',
     'nav.skills': 'Competenze',
     'nav.experience': 'Esperienza',
+    'nav.education': 'Formazione',
     'nav.contact': 'Contatti',
     
     // Hero
     'hero.greeting': 'Ciao, sono',
-    'hero.role': 'AI/ML Engineer & Senior Java Backend',
-    'hero.subtitle': 'Building AI APIs & Products with LLMs (Spring AI, OpenAI, Java/Python)',
+    'hero.role': 'AI Platform Architect & Senior Java Engineer',
+    'hero.subtitle': 'Building AI APIs & production-ready AI products (LLMs, Spring AI, OpenAI, Java/Python)',
     'hero.cta.contact': 'Contattami',
     'hero.cta.experience': 'Vedi Esperienza',
     
@@ -157,7 +188,7 @@ export const translations = {
     'experience.additional': 'Progetti & Clienti Aggiuntivi',
     
     // IzzOnLine
-    'exp.izzonline.desc': 'Dal 2018 lavoro come Java Backend Developer freelance, supportando diverse aziende nella progettazione e nello sviluppo di applicazioni enterprise e sistemi distribuiti. Negli anni ho consolidato solide competenze tecniche, architetturali e di leadership, contribuendo alla delivery di soluzioni mission-critical nei settori finanza, assicurazioni e cybersecurity. In parallelo, ho progettato e realizzato SmartApiBox (attualmente in Early Preview), una piattaforma multi-modulo Java/Spring Boot sviluppata integralmente nel tempo libero. La piattaforma integra: architettura plugin-based per l\'orchestrazione di servizi AI, autenticazione avanzata (JWT + OAuth2), integrazione Stripe per billing a sottoscrizione e consumo, sistema di plugin estensibile tramite uno SDK pubblicato su Maven Central, API-key configurabili con supporto a molteplici modelli AI (OpenAI GPT, Llama, ecc.), un ambiente sandbox dedicato agli sviluppatori terzi per creare, testare e pubblicare plugin in sicurezza, workflow cross-service coordinati con il pattern Saga, che garantiscono consistenza e affidabilità, plugin AI esposti sia come REST API che come MCP Tools, incluso un bridge dedicato per la compatibilità con Claude Desktop. SmartApiBox è una piattaforma incentrata sullo sviluppatore che permette di creare, distribuire e monetizzare API alimentate da AI in pochi minuti, astraendo completamente la complessità infrastrutturale, il billing e la scalabilità. Le API diventano vere e proprie prodotti standalone, esposti attraverso domini dedicati come whatschat.smartapibox.com o quizforge.smartapibox.com.',
+    'exp.izzonline.desc': 'Dal 2018 lavoro come Java Backend Developer freelance, supportando diverse aziende nella progettazione e nello sviluppo di applicazioni enterprise e sistemi distribuiti. Negli anni ho consolidato solide competenze tecniche, architetturali e di leadership, contribuendo alla delivery di soluzioni mission-critical nei settori finanza, assicurazioni e cybersecurity. In parallelo, ho progettato e realizzato SmartApiBox, una piattaforma multi-modulo Java/Spring Boot sviluppata integralmente nel tempo libero. La piattaforma integra: architettura plugin-based per l\'orchestrazione di servizi AI, autenticazione avanzata (JWT + OAuth2), integrazione Stripe per billing a sottoscrizione e consumo, sistema di plugin estensibile tramite uno SDK pubblicato su Maven Central, API-key configurabili con supporto a molteplici modelli AI (OpenAI GPT, Llama, ecc.), un ambiente sandbox dedicato agli sviluppatori terzi per creare, testare e pubblicare plugin in sicurezza, workflow cross-service coordinati con il pattern Saga, che garantiscono consistenza e affidabilità, plugin AI esposti sia come REST API che come MCP Tools, incluso un bridge dedicato per la compatibilità con Claude Desktop. SmartApiBox è una piattaforma incentrata sullo sviluppatore che permette di creare, distribuire e monetizzare API alimentate da AI in pochi minuti, astraendo completamente la complessità infrastrutturale, il billing e la scalabilità. Le API diventano veri e propri prodotti standalone, esposti attraverso domini dedicati come smartqrbox.com, whatschat.smartapibox.com o quizforge.smartapibox.com. Ho sviluppato inoltre un\'app ibrida (iOS/Android) in Flutter per organizzare partite di calcetto: Football Metchy, e sto sviluppando un\'app nativa Swift per iPad/iPhone: CodePilot, un mini IDE per sviluppare da iPad con AI Agent integrati.',
     'exp.izzonline.h1': 'Sviluppate REST API basate su AI usando Spring AI, Model Context Protocol (MCP) e provider LLM come OpenAI e Ollama',
     'exp.izzonline.h2': 'Adottati pattern Saga e architetture event-driven per orchestrare workflow distribuiti',
     'exp.izzonline.h3': 'Progettate architetture modulari basate su plugin con discovery dinamico, versioning e isolamento sandbox/produzione',
@@ -165,7 +196,29 @@ export const translations = {
     'exp.izzonline.h5': 'Realizzate pipeline CI/CD tramite GitLab e deploy di workload containerizzati con Docker, Kubernetes e Helm',
     'exp.izzonline.h6': 'Progettate e ottimizzate piattaforme backend multi-tenant con tracking avanzato dell\'utilizzo, caching e controllo granulare degli accessi',
     
-    // AGM Solutions
+    // AGM Solutions (for Engineering) – LNG Decision Support
+    'exp.agmlng.desc': 'Progettazione e sviluppo di una piattaforma di decision support per l\'ottimizzazione delle operazioni LNG, progettata come base per modelli avanzati di forecasting e optimization.',
+    'exp.agmlng.h1': 'Definizione e implementazione di un motore di simulazione (Python) per la pianificazione dei cargo LNG, con gestione di vincoli reali (capacity, berth availability, maintenance windows, regasification rates)',
+    'exp.agmlng.h2': 'Sviluppo di un backend Java (Spring Boot) per orchestrazione delle simulazioni e integrazione dati enterprise (SQL Server), con esposizione di API REST per scenari what-if',
+    'exp.agmlng.h3': 'Progettazione di un modello di simulazione realistico basato su unloading multi-day e inventory dinamico, foundation per modelli di previsione e ottimizzazione',
+    'exp.agmlng.h4': 'Implementazione di scenario analysis cumulativa (baseline vs scenario) con supporto a decisioni progressive (add, edit, replan, override)',
+    'exp.agmlng.h5': 'Sviluppo di una dashboard interattiva (Next.js, TypeScript) per visualizzazione real-time e decision explainability',
+    'exp.agmlng.h6': 'Architettura progettata per l\'integrazione di modelli ML (forecasting domanda, optimization multi-obiettivo) e digital twin simulations',
+    'exp.agmlng.h7': 'Collaborazione con stakeholder di business e team Engineering per validazione dei modelli e allineamento ai vincoli operativi reali',
+
+    // AGM Solutions (for Engineering) – NCIS Gas
+    'exp.agmeng.desc': 'Sviluppo di uno dei microservizi core del sistema NCIS (National Comprehensive Information System) per la gestione operativa della rete di trasmissione del gas naturale, coprendo l\'intero ciclo di vita delle transazioni energetiche e delle nomination.',
+    'exp.agmeng.h1': 'Progettazione e sviluppo di un microservizio enterprise Java (Java 21, Spring Boot 3.x) per la gestione di flussi gas (buy/sell), nomination orarie e allocazioni energetiche',
+    'exp.agmeng.h2': 'Modellazione e orchestrazione del ciclo completo delle nomination (NOMINT, DELORD) con supporto multi-versione XML, validazione XSD e gestione evolutiva dei formati',
+    'exp.agmeng.h3': 'Integrazione real-time con sistemi SCADA per acquisizione dati di misura e calcolo di sbilanciamenti, allocazioni DIP e pricing operativo',
+    'exp.agmeng.h4': 'Integrazione con piattaforme di mercato europee (RBP, PRISMA) tramite API REST e flussi asincroni, garantendo consistenza e sincronizzazione dei dati',
+    'exp.agmeng.h5': 'Implementazione di job distribuiti cluster-aware (Quartz + ShedLock) per polling XML, sincronizzazione sistemi esterni e notifiche real-time',
+    'exp.agmeng.h6': 'Comunicazione inter-servizio tramite Spring Cloud OpenFeign verso microservizi core',
+    'exp.agmeng.h7': 'Implementazione sicurezza enterprise con OAuth2 (client credentials) e federazione AWS Cognito, con validazione JWT e gestione multi-tenant',
+    'exp.agmeng.h8': 'Audit trail completo tramite Hibernate Envers e notifiche real-time via WebSocket (STOMP/SockJS)',
+    'exp.agmeng.h9': 'Gestione documentale (XML/CSV/Excel) con Apache POI e versionamento su S3',
+
+    // AGM Solutions (for Generali)
     'exp.agm.desc': 'Team Leader di un progetto di cybersecurity focalizzato sulla valutazione e gestione delle vulnerabilità, comprendente sistemi di questionnaire assessment, flussi di remediation e strumenti per la gestione degli incidenti di sicurezza.',
     'exp.agm.h1': 'Coordinamento tecnico del team e supervisione dell\'intero progetto nel dominio cybersecurity, garantendo qualità, sicurezza e continuità operativa',
     'exp.agm.h2': 'Progettazione e configurazione di pipeline CI/CD per ambienti eterogenei: stack Windows/WildFly e piattaforma Linux/Kubernetes',
@@ -189,7 +242,13 @@ export const translations = {
     'exp.sky.desc': 'Sviluppato strumento di archiviazione password crittografate per i sistemi Sky Italia',
     'exp.ubi.desc': 'Miglioramento delle performance e modernizzazione tecnologica delle applicazioni esistenti',
     'exp.borsa.desc': 'Sviluppo e integrazione di applicazioni web per London Stock Exchange',
-    
+
+    // Education
+    'education.badge': 'Formazione',
+    'education.title': 'Formazione',
+    'edu.zenale.degree': 'Diploma in Operatore della Gestione Aziendale',
+    'edu.paleocapa.degree': 'Diploma in Informatica',
+
     // Contact
     'contact.badge': 'Contattami',
     'contact.title': 'Lavoriamo Insieme',
@@ -198,6 +257,7 @@ export const translations = {
     'contact.email': 'Email',
     'contact.social': 'Collegati sui Social',
     'contact.footer.rights': 'Tutti i diritti riservati.',
+    'contact.qr.alt': 'QR code per contattare Stefania Izzo',
     'contact.cta.title': 'Pronto a collaborare?',
     'contact.cta.text': 'Sono attualmente disponibile per progetti freelance e opportunità di consulenza. Se hai bisogno di aiuto con architetture a microservizi, integrazione AI o sviluppo backend enterprise, sarò felice di sentirti.',
     

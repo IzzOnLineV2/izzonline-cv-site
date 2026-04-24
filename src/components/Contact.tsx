@@ -75,6 +75,25 @@ export function Contact() {
           <p className="text-slate-400 dark:text-slate-400 light:text-slate-600 max-w-2xl mx-auto">
             {t('contact.subtitle')}
           </p>
+          <div className="mt-10 flex justify-center">
+            <div className="relative group">
+              <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+                <div className="h-64 w-64 rounded-full bg-gradient-to-br from-cyan-500/40 via-purple-500/40 to-pink-500/40 blur-3xl sm:h-80 sm:w-80" />
+              </div>
+              <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+                <div className="h-48 w-48 rounded-full bg-gradient-to-tr from-cyan-400/30 to-fuchsia-400/30 blur-2xl animate-pulse sm:h-64 sm:w-64" />
+              </div>
+              <div className="relative -rotate-6 transition-all duration-500 ease-out group-hover:rotate-0 group-hover:scale-105">
+                <img
+                  src="https://assets.smartapibox.com/QR/QR-Stefania.svg"
+                  alt={t('contact.qr.alt')}
+                  width={280}
+                  height={280}
+                  className="rounded-3xl bg-white p-3 shadow-2xl shadow-purple-500/40 ring-1 ring-white/10 w-56 h-56 sm:w-72 sm:h-72"
+                />
+              </div>
+            </div>
+          </div>
         </motion.div>
 
         <div className="max-w-4xl mx-auto">
@@ -192,7 +211,7 @@ export function Contact() {
           </a>
         </div>
         
-        <p>© 2025 IzzOnLine di Stefania Izzo. {t('contact.footer.rights')}</p>
+        <p>© 2026 IzzOnLine di Stefania Izzo. {t('contact.footer.rights')}</p>
         <div className="mt-4 flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-4">
           <p>PEC: <a href="mailto:izzonline@pec.net" className="text-slate-400 dark:text-slate-400 light:text-purple-600 hover:text-purple-400 transition-colors">izzonline@pec.net</a></p>
           <span className="hidden sm:inline">•</span>

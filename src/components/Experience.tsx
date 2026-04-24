@@ -10,7 +10,7 @@ export function Experience() {
   const experiences = [
     {
       company: 'IzzOnLine',
-      role: 'Senior Java Developer & DevOps',
+      role: 'AI Platform Architect & Senior Java Engineer',
       period: 'Sep 2018 - Present · 7 yrs 3 mos',
       location: 'Bergamo Area, Italy',
       description: t('exp.izzonline.desc'),
@@ -25,9 +25,45 @@ export function Experience() {
       technologies: ['Spring Boot', 'Spring AI', 'Microservices', 'Docker', 'Kubernetes', 'Kafka', 'PostgreSQL', 'Model Context Protocol'],
     },
     {
+      company: 'AGM Solutions (for Engineering)',
+      role: 'Senior Java Backend Developer',
+      period: 'Jan 2026 - Present',
+      location: 'Italy',
+      description: t('exp.agmlng.desc'),
+      highlights: [
+        t('exp.agmlng.h1'),
+        t('exp.agmlng.h2'),
+        t('exp.agmlng.h3'),
+        t('exp.agmlng.h4'),
+        t('exp.agmlng.h5'),
+        t('exp.agmlng.h6'),
+        t('exp.agmlng.h7'),
+      ],
+      technologies: ['Python', 'Java 21', 'Spring Boot 3', 'SQL Server', 'Next.js', 'TypeScript', 'REST API', 'ML Forecasting', 'Optimization', 'Digital Twin'],
+    },
+    {
+      company: 'AGM Solutions (for Engineering)',
+      role: 'Senior Java Backend Developer',
+      period: 'Mag 2024 – Mag 2025',
+      location: 'Italy',
+      description: t('exp.agmeng.desc'),
+      highlights: [
+        t('exp.agmeng.h1'),
+        t('exp.agmeng.h2'),
+        t('exp.agmeng.h3'),
+        t('exp.agmeng.h4'),
+        t('exp.agmeng.h5'),
+        t('exp.agmeng.h6'),
+        t('exp.agmeng.h7'),
+        t('exp.agmeng.h8'),
+        t('exp.agmeng.h9'),
+      ],
+      technologies: ['Java 21', 'Spring Boot 3', 'Spring Cloud OpenFeign', 'OAuth2', 'AWS Cognito', 'Quartz', 'ShedLock', 'Hibernate Envers', 'WebSocket', 'Apache POI', 'S3', 'XML/XSD'],
+    },
+    {
       company: 'AGM Solutions (for Generali Assicurazioni)',
       role: 'Team Leader & Technical Ambassador',
-      period: '2019 - Present',
+      period: '2019 - 2023',
       location: 'Italy',
       description: t('exp.agm.desc'),
       highlights: [
@@ -191,36 +227,45 @@ export function Experience() {
                         text = text.substring(firstSmartApiBoxIndex + 'SmartApiBox'.length);
                       }
                       
-                      // Handle whatschat.smartapibox.com
+                      // Handle inline links: SDK + external domains
+                      const linkTokens: { match: string; label: string; href: string }[] = [
+                        { match: 'SDK', label: 'SDK', href: 'https://mvnrepository.com/artifact/com.smartapibox/plugin-api-sdk' },
+                        { match: 'smartqrbox.com', label: 'smartqrbox.com', href: 'https://smartqrbox.com' },
+                        { match: 'whatschat.smartapibox.com', label: 'whatschat.smartapibox.com', href: 'https://whatschat.smartapibox.com' },
+                        { match: 'quizforge.smartapibox.com', label: 'quizforge.smartapibox.com', href: 'https://quizforge.smartapibox.com' },
+                        { match: 'Football Metchy', label: 'Football Metchy', href: 'https://metchy.events/' },
+                        { match: 'CodePilot', label: 'CodePilot', href: 'https://codepilot.it' },
+                      ];
                       let currentText = text;
                       while (currentText.length > 0) {
-                        const whatschatIndex = currentText.indexOf('whatschat.smartapibox.com');
-                        const quizforgeIndex = currentText.indexOf('quizforge.smartapibox.com');
-                        
-                        if (whatschatIndex === -1 && quizforgeIndex === -1) {
+                        let nextIndex = -1;
+                        let nextToken: typeof linkTokens[number] | null = null;
+                        for (const token of linkTokens) {
+                          const idx = currentText.indexOf(token.match);
+                          if (idx !== -1 && (nextIndex === -1 || idx < nextIndex)) {
+                            nextIndex = idx;
+                            nextToken = token;
+                          }
+                        }
+
+                        if (nextIndex === -1 || !nextToken) {
                           parts.push(currentText);
                           break;
                         }
-                        
-                        const nextIndex = whatschatIndex !== -1 && (quizforgeIndex === -1 || whatschatIndex < quizforgeIndex) 
-                          ? whatschatIndex 
-                          : quizforgeIndex;
-                        const isWhatschat = nextIndex === whatschatIndex;
-                        const domain = isWhatschat ? 'whatschat.smartapibox.com' : 'quizforge.smartapibox.com';
-                        
+
                         parts.push(currentText.substring(0, nextIndex));
                         parts.push(
-                          <a 
+                          <a
                             key={key++}
-                            href={`https://${domain}`}
-                            target="_blank" 
+                            href={nextToken.href}
+                            target="_blank"
                             rel="noopener noreferrer"
                             className="text-cyan-400 hover:text-cyan-300 underline decoration-cyan-400/50 hover:decoration-cyan-300 transition-colors"
                           >
-                            {domain}
+                            {nextToken.label}
                           </a>
                         );
-                        currentText = currentText.substring(nextIndex + domain.length);
+                        currentText = currentText.substring(nextIndex + nextToken.match.length);
                       }
                       
                       return parts;

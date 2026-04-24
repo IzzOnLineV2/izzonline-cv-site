@@ -4,9 +4,9 @@ import '../index.css';
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://izzonline.it'),
-  title: 'IzzOnLine di Stefania Izzo — AI/ML Engineer & Senior Java Backend',
+  title: 'IzzOnLine di Stefania Izzo — AI Platform Architect & Senior Java Engineer',
   description:
-    'Stefania Izzo — AI/ML Engineer & Senior Java Backend | Building AI APIs & Products with LLMs (Spring AI, OpenAI, Java/Python). 15+ anni di esperienza enterprise. Cologno Al Serio (BG), Italia.',
+    'Stefania Izzo — AI Platform Architect & Senior Java Engineer | Building AI APIs & production-ready AI products (LLMs, Spring AI, OpenAI, Java/Python). 15+ anni di esperienza enterprise. Cologno Al Serio (BG), Italia.',
   keywords: [
     'Stefania Izzo',
     'IzzOnLine',
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'IzzOnLine di Stefania Izzo',
     description:
-      'AI/ML Engineer & Senior Java Backend | Building AI APIs & Products with LLMs',
+      'AI Platform Architect & Senior Java Engineer | Building AI APIs & production-ready AI products',
     url: 'https://izzonline.it',
     siteName: 'IzzOnLine',
     images: [
@@ -49,7 +49,7 @@ export const metadata: Metadata = {
     card: 'summary',
     title: 'IzzOnLine di Stefania Izzo',
     description:
-      'AI/ML Engineer & Senior Java Backend | Building AI APIs & Products with LLMs',
+      'AI Platform Architect & Senior Java Engineer | Building AI APIs & production-ready AI products',
     images: ['https://assets.izzonline.it/images/stefy.png'],
   },
   alternates: {
@@ -67,7 +67,7 @@ const jsonLd = {
   mainEntity: {
     '@type': 'Person',
     name: 'Stefania Izzo',
-    jobTitle: 'AI/ML Engineer & Senior Java Backend',
+    jobTitle: 'AI Platform Architect & Senior Java Engineer',
     url: 'https://izzonline.it',
     email: 'izzonline@gmail.com',
     telephone: '+39 339 187 63 63',

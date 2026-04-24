@@ -13,3 +13,4 @@ dist/
 
 # TypeScript
 next-env.d.ts
+.vercel
