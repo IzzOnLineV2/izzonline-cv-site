@@ -27,15 +27,22 @@ const SPRING_EXPERTISE = [
 export default function CvPage() {
   const { t } = useLanguage();
 
-  // Force light mode on this tab only (bypass next-themes to avoid cross-tab sync).
+  // Force light mode + white body on this tab only (bypass next-themes to avoid cross-tab sync).
   useEffect(() => {
     const root = document.documentElement;
+    const body = document.body;
     const hadDark = root.classList.contains('dark');
+    const prevBodyStyle = body.getAttribute('style') ?? '';
     root.classList.remove('dark');
     root.classList.add('light');
+    // Strip root layout's inline dark background so nothing "bleeds" into print margins.
+    body.removeAttribute('style');
+    body.style.backgroundColor = '#ffffff';
     return () => {
       root.classList.remove('light');
       if (hadDark) root.classList.add('dark');
+      if (prevBodyStyle) body.setAttribute('style', prevBodyStyle);
+      else body.removeAttribute('style');
     };
   }, []);
 

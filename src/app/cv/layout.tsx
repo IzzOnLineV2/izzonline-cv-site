@@ -6,6 +6,26 @@ export const metadata: Metadata = {
   robots: { index: false, follow: false },
 };
 
+const forceLightBodyCss = `
+  html, body {
+    background: #ffffff !important;
+    background-color: #ffffff !important;
+    background-image: none !important;
+  }
+  @media print {
+    html, body {
+      background: #ffffff !important;
+      background-color: #ffffff !important;
+      background-image: none !important;
+    }
+  }
+`;
+
 export default function CvLayout({ children }: { children: React.ReactNode }) {
-  return <>{children}</>;
+  return (
+    <>
+      <style dangerouslySetInnerHTML={{ __html: forceLightBodyCss }} />
+      {children}
+    </>
+  );
 }

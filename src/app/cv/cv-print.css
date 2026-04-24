@@ -25,20 +25,6 @@
   color: var(--cv-fg);
 }
 
-.cv-page .cv-section {
-  break-inside: avoid;
-  page-break-inside: avoid;
-}
-
-.cv-page .cv-entry {
-  break-inside: avoid;
-  page-break-inside: avoid;
-}
-
-.cv-page .cv-no-print {
-  /* visible on screen, hidden in print via media query below */
-}
-
 @media print {
   @page {
     size: A4;
@@ -49,6 +35,19 @@
   body {
     background: #ffffff !important;
     color: #000000 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  /* Strip any background gradients / outlines / shadows that might leak a "black" edge */
+  .cv-page,
+  .cv-page * {
+    background-image: none !important;
+    box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    text-shadow: none !important;
+    outline: none !important;
+    filter: none !important;
   }
 
   .cv-no-print {
@@ -59,6 +58,11 @@
     font-size: 10.5pt;
     background: #ffffff;
     color: #0f172a;
+    /* Normalize typography and avoid bleed into @page margins */
+    max-width: none;
+    min-height: 0 !important;
+    margin: 0;
+    padding: 0;
   }
 
   .cv-page a {
@@ -67,12 +71,41 @@
   }
 
   .cv-page .cv-chip {
-    border: 1px solid #94a3b8;
-    color: #1e293b;
+    border: 1px solid #cbd5e1;
+    color: #1f2937;
     background: transparent;
   }
 
+  /* Typography helpers for clean page breaks */
+  .cv-page p,
+  .cv-page li {
+    orphans: 3;
+    widows: 3;
+  }
+
+  .cv-page h2 {
+    break-after: avoid;
+    page-break-after: avoid;
+  }
+
+  .cv-page h3 {
+    break-after: avoid;
+    page-break-after: avoid;
+  }
+
+  /* Keep headings with the first lines of the following block */
+  .cv-page .cv-entry {
+    break-inside: auto;
+    page-break-inside: auto;
+  }
+
+  /* Allow long sections to break, but try to keep small blocks together */
+  .cv-page .cv-section {
+    break-inside: auto;
+    page-break-inside: auto;
+  }
+
   .cv-page header.cv-header {
-    padding-bottom: 8mm;
+    margin-bottom: 4mm;
   }
 }
