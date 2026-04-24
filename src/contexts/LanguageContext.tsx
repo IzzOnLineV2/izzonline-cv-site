@@ -1,4 +1,4 @@
-import { createContext, useContext, useState, ReactNode } from 'react';
+import { createContext, useContext, useEffect, useState, ReactNode } from 'react';
 
 type Language = 'en' | 'it';
 
@@ -140,6 +140,17 @@ export const translations = {
     'pdf.generating': 'Generating PDF...',
     'pdf.success': 'CV downloaded successfully!',
     'pdf.error': 'Error generating PDF. Please try again.',
+
+    // Print CV
+    'cv.print': 'Print CV',
+    'cv.back': 'Back to site',
+    'cv.contact': 'Contact',
+    'cv.summary': 'Professional Summary',
+    'cv.experience': 'Professional Experience',
+    'cv.otherProjects': 'Additional Projects & Clients',
+    'cv.education': 'Education',
+    'cv.skills': 'Technical Skills',
+    'cv.springExpertise': 'Spring Framework Expertise',
   },
   it: {
     // Header
@@ -270,11 +281,44 @@ export const translations = {
     'pdf.generating': 'Generazione PDF...',
     'pdf.success': 'CV scaricato con successo!',
     'pdf.error': 'Errore nella generazione del PDF. Per favore riprova.',
+
+    // Print CV
+    'cv.print': 'Stampa CV',
+    'cv.back': 'Torna al sito',
+    'cv.contact': 'Contatti',
+    'cv.summary': 'Profilo Professionale',
+    'cv.experience': 'Esperienza Professionale',
+    'cv.otherProjects': 'Progetti & Clienti Aggiuntivi',
+    'cv.education': 'Formazione',
+    'cv.skills': 'Competenze Tecniche',
+    'cv.springExpertise': 'Competenze Spring Framework',
   },
 };
 
+const STORAGE_KEY = 'izzonline-language';
+
 export function LanguageProvider({ children }: { children: ReactNode }) {
-  const [language, setLanguage] = useState<Language>('it'); // Default to Italian
+  const [language, setLanguageState] = useState<Language>('it');
+
+  useEffect(() => {
+    try {
+      const stored = localStorage.getItem(STORAGE_KEY) as Language | null;
+      if (stored === 'it' || stored === 'en') {
+        setLanguageState(stored);
+      }
+    } catch {
+      /* localStorage unavailable */
+    }
+  }, []);
+
+  const setLanguage = (lang: Language) => {
+    setLanguageState(lang);
+    try {
+      localStorage.setItem(STORAGE_KEY, lang);
+    } catch {
+      /* localStorage unavailable */
+    }
+  };
 
   const t = (key: string): string => {
     return translations[language][key as keyof typeof translations.en] || key;

@@ -85,7 +85,7 @@ export function Contact() {
               </div>
               <div className="relative -rotate-6 transition-all duration-500 ease-out group-hover:rotate-0 group-hover:scale-105">
                 <img
-                  src="https://assets.smartapibox.com/QR/QR-Stefania.svg"
+                  src="https://assets.smartapibox.com/QR/IzzOnLine.svg"
                   alt={t('contact.qr.alt')}
                   width={280}
                   height={280}
