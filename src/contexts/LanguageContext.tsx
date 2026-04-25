@@ -59,12 +59,15 @@ export const translations = {
     
     // IzzOnLine
     'exp.izzonline.desc': 'Since 2018, I work as a freelance Java Backend Developer, supporting various companies in the design and development of enterprise applications and distributed systems. Over the years I have consolidated solid technical, architectural and leadership skills, contributing to the delivery of mission-critical solutions in the finance, insurance and cybersecurity sectors. In parallel, I designed and built SmartApiBox, a multi-module Java/Spring Boot platform developed entirely in my spare time. The platform integrates: plugin-based architecture for AI service orchestration, advanced authentication (JWT + OAuth2), Stripe integration for subscription and consumption billing, extensible plugin system through an SDK published on Maven Central, configurable API keys with support for multiple AI models (OpenAI GPT, Llama, etc.), a dedicated sandbox environment for third-party developers to create, test and publish plugins securely, cross-service workflows coordinated with the Saga pattern, ensuring consistency and reliability, AI plugins exposed both as REST APIs and MCP Tools, including a dedicated bridge for compatibility with Claude Desktop. SmartApiBox is a developer-first platform that enables building, deploying and monetizing AI-powered APIs in minutes, completely abstracting infrastructural complexity, billing and scalability. APIs become true standalone products, exposed through dedicated domains like smartqrbox.com, whatschat.smartapibox.com or quizforge.smartapibox.com. I also developed a hybrid (iOS/Android) Flutter app to organize 5-a-side football matches: Football Metchy™, and I\'m building a native Swift app for iPad/iPhone: CodePilot, a mini IDE to develop on iPad with integrated AI Agents.',
-    'exp.izzonline.h1': 'Developed AI-based REST APIs using Spring AI, Model Context Protocol (MCP) and LLM providers like OpenAI and Ollama',
-    'exp.izzonline.h2': 'Adopted Saga patterns and event-driven architectures to orchestrate distributed workflows',
-    'exp.izzonline.h3': 'Designed modular plugin-based architectures with dynamic discovery, versioning and sandbox/production isolation',
-    'exp.izzonline.h4': 'Integrated secure authentication and authorization with Spring Security, Keycloak, OAuth2, JWT, SAML2 and LDAP',
-    'exp.izzonline.h5': 'Built CI/CD pipelines through GitLab and deployment of containerized workloads with Docker, Kubernetes and Helm',
-    'exp.izzonline.h6': 'Designed and optimized multi-tenant backend platforms with advanced usage tracking, caching and granular access control',
+    'exp.izzonline.h1': 'Plugin-based architecture for AI service orchestration with dynamic discovery, versioning and sandbox/production isolation',
+    'exp.izzonline.h2': 'AI APIs exposed both as REST APIs and MCP Tools, with a dedicated bridge for Claude Desktop compatibility',
+    'exp.izzonline.h3': 'LLM provider integration via Spring AI: OpenAI, Ollama, Llama and per-tenant configurable models',
+    'exp.izzonline.h4': 'Plugin SDK published on Maven Central, with sandbox for third-party developers and publishing/validation workflow',
+    'exp.izzonline.h5': 'Enterprise security: Spring Security, JWT/OAuth2, API key management and granular usage tracking for multi-tenant',
+    'exp.izzonline.h6': 'Stripe billing with subscriptions and credit consumption; cross-service orchestration with Saga pattern and event-driven',
+    'exp.izzonline.h7': 'CI/CD GitLab and containerized deployment with Docker, Kubernetes and Helm',
+    'exp.izzonline.h8': 'Creator of Football Metchy™, a Flutter mobile app (iOS/Android) for organizing sports events and 5-a-side football matches, designed with evolution toward dynamic ranking, intelligent player matching and future integration of predictive models',
+    'exp.izzonline.h9': 'Creator of CodePilot, a native Swift app for iPad/iPhone: AI-powered iPad IDE for remote development from iPad, with integrated AI Agents and remote coding workflow',
     
     // AGM Solutions (for Engineering) – LNG Decision Support
     'exp.agmlng.desc': 'Design and development of a decision support platform for LNG operations optimization, designed as a foundation for advanced forecasting and optimization models.',
