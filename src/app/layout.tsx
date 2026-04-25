@@ -57,9 +57,9 @@ export const metadata: Metadata = {
     siteName: 'IzzOnLine',
     images: [
       {
-        url: 'https://assets.izzonline.it/images/stefy.png',
-        width: 400,
-        height: 400,
+        url: 'https://assets.izzonline.it/images/og-izzonline.png',
+        width: 1200,
+        height: 630,
         alt: 'Stefania Izzo — AI Platform Architect & Senior Java Engineer',
       },
     ],
@@ -68,10 +68,10 @@ export const metadata: Metadata = {
     type: 'profile',
   },
   twitter: {
-    card: 'summary',
+    card: 'summary_large_image',
     title: 'Stefania Izzo — AI Platform Architect & Senior Java Engineer',
     description: SHORT_DESCRIPTION,
-    images: ['https://assets.izzonline.it/images/stefy.png'],
+    images: ['https://assets.izzonline.it/images/og-izzonline.png'],
   },
   alternates: {
     canonical: SITE_URL,
