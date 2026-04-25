@@ -43,13 +43,13 @@ export const translations = {
     
     // Skill Categories
     'skills.cat.languages': 'Languages & Frameworks',
-    'skills.cat.architecture': 'Architecture & Patterns',
-    'skills.cat.ai': 'AI Integration',
+    'skills.cat.architecture': 'Backend & Architecture',
+    'skills.cat.ai': 'AI / LLM / ML',
     'skills.cat.security': 'Security',
-    'skills.cat.databases': 'Databases & Persistence',
-    'skills.cat.messaging': 'Messaging & Events',
-    'skills.cat.devops': 'DevOps & Tools',
-    'skills.cat.cloud': 'Cloud & Deployment',
+    'skills.cat.databases': 'Database & Persistence',
+    'skills.cat.messaging': 'Messaging & Realtime',
+    'skills.cat.devops': 'DevOps & Cloud',
+    'skills.cat.frontend': 'Frontend & Mobile',
     
     // Experience
     'experience.badge': 'Career Journey',
@@ -175,7 +175,7 @@ export const translations = {
     // Summary
     'summary.badge': 'Chi Sono',
     'summary.title': 'Profilo Professionale',
-    'summary.content': 'Senior Java Developer con oltre 15 anni di esperienza nella progettazione e sviluppo di applicazioni enterprise e sistemi distribuiti. Specializzata nell\'ecosistema Spring, architetture a microservizi e integrazione AI. Comprovata esperienza nella guida di team tecnici e nella realizzazione di soluzioni mission-critical per i settori finanza, assicurazioni e cybersecurity.',
+    'summary.content': 'Senior Java Developer e AI Platform Architect con quasi 20 anni di esperienza nella progettazione e sviluppo di applicazioni enterprise, sistemi distribuiti e piattaforme backend mission-critical. Specializzata nell\'ecosistema Spring, architetture a microservizi, integrazione AI/LLM e soluzioni ML-ready. Combina competenze backend enterprise con progettazione di sistemi AI, simulazione, ottimizzazione e Digital Twin per realizzare soluzioni scalabili e utilizzabili in produzione. Esperienza nella guida di team tecnici e nella delivery di soluzioni per i settori finanza, assicurazioni, cybersecurity ed energia.',
     
     // Skills
     'skills.badge': 'Competenze Tecniche',
@@ -188,13 +188,13 @@ export const translations = {
     
     // Skill Categories
     'skills.cat.languages': 'Linguaggi & Framework',
-    'skills.cat.architecture': 'Architettura & Pattern',
-    'skills.cat.ai': 'Integrazione AI',
-    'skills.cat.security': 'Sicurezza',
-    'skills.cat.databases': 'Database & Persistenza',
-    'skills.cat.messaging': 'Messaging & Eventi',
-    'skills.cat.devops': 'DevOps & Strumenti',
-    'skills.cat.cloud': 'Cloud & Deployment',
+    'skills.cat.architecture': 'Backend & Architecture',
+    'skills.cat.ai': 'AI / LLM / ML',
+    'skills.cat.security': 'Security',
+    'skills.cat.databases': 'Database & Persistence',
+    'skills.cat.messaging': 'Messaging & Realtime',
+    'skills.cat.devops': 'DevOps & Cloud',
+    'skills.cat.frontend': 'Frontend & Mobile',
     
     // Experience
     'experience.badge': 'Percorso Professionale',
@@ -203,54 +203,56 @@ export const translations = {
     'experience.additional': 'Progetti & Clienti Aggiuntivi',
     
     // IzzOnLine
-    'exp.izzonline.desc': 'Dal 2018 lavoro come Java Backend Developer freelance, supportando diverse aziende nella progettazione e nello sviluppo di applicazioni enterprise e sistemi distribuiti. Negli anni ho consolidato solide competenze tecniche, architetturali e di leadership, contribuendo alla delivery di soluzioni mission-critical nei settori finanza, assicurazioni e cybersecurity. In parallelo, ho progettato e realizzato SmartApiBox, una piattaforma multi-modulo Java/Spring Boot sviluppata integralmente nel tempo libero. La piattaforma integra: architettura plugin-based per l\'orchestrazione di servizi AI, autenticazione avanzata (JWT + OAuth2), integrazione Stripe per billing a sottoscrizione e consumo, sistema di plugin estensibile tramite uno SDK pubblicato su Maven Central, API-key configurabili con supporto a molteplici modelli AI (OpenAI GPT, Llama, ecc.), un ambiente sandbox dedicato agli sviluppatori terzi per creare, testare e pubblicare plugin in sicurezza, workflow cross-service coordinati con il pattern Saga, che garantiscono consistenza e affidabilità, plugin AI esposti sia come REST API che come MCP Tools, incluso un bridge dedicato per la compatibilità con Claude Desktop. SmartApiBox è una piattaforma incentrata sullo sviluppatore che permette di creare, distribuire e monetizzare API alimentate da AI in pochi minuti, astraendo completamente la complessità infrastrutturale, il billing e la scalabilità. Le API diventano veri e propri prodotti standalone, esposti attraverso domini dedicati come smartqrbox.com, whatschat.smartapibox.com o quizforge.smartapibox.com. Ho sviluppato inoltre un\'app ibrida (iOS/Android) in Flutter per organizzare partite di calcetto: Football Metchy™, e sto sviluppando un\'app nativa Swift per iPad/iPhone: CodePilot, un mini IDE per sviluppare da iPad con AI Agent integrati.',
-    'exp.izzonline.h1': 'Sviluppate REST API basate su AI usando Spring AI, Model Context Protocol (MCP) e provider LLM come OpenAI e Ollama',
-    'exp.izzonline.h2': 'Adottati pattern Saga e architetture event-driven per orchestrare workflow distribuiti',
-    'exp.izzonline.h3': 'Progettate architetture modulari basate su plugin con discovery dinamico, versioning e isolamento sandbox/produzione',
-    'exp.izzonline.h4': 'Integrata autenticazione e autorizzazione sicura con Spring Security, Keycloak, OAuth2, JWT, SAML2 e LDAP',
-    'exp.izzonline.h5': 'Realizzate pipeline CI/CD tramite GitLab e deploy di workload containerizzati con Docker, Kubernetes e Helm',
-    'exp.izzonline.h6': 'Progettate e ottimizzate piattaforme backend multi-tenant con tracking avanzato dell\'utilizzo, caching e controllo granulare degli accessi',
+    'exp.izzonline.desc': 'Dal 2018 lavora come Java Backend Developer freelance e AI Platform Architect, supportando aziende nella progettazione e nello sviluppo di applicazioni enterprise, microservizi e sistemi distribuiti. In parallelo ha progettato e realizzato SmartApiBox, una piattaforma multi-modulo Java/Spring Boot per costruire, distribuire e monetizzare API alimentate da AI, astraendo infrastruttura, billing, autenticazione e integrazione con i provider LLM. SmartApiBox è anche una piattaforma developer-first: ogni API può diventare un prodotto standalone esposto su domini dedicati come smartqrbox.com, whatschat.smartapibox.com o quizforge.smartapibox.com.',
+    'exp.izzonline.h1': 'Architettura plugin-based per orchestrazione di servizi AI con discovery dinamico, versioning e isolamento sandbox/produzione',
+    'exp.izzonline.h2': 'API AI esposte sia come REST API sia come MCP Tools, con bridge dedicato per la compatibilità con Claude Desktop',
+    'exp.izzonline.h3': 'Integrazione di provider LLM tramite Spring AI: OpenAI, Ollama, Llama e modelli configurabili per tenant',
+    'exp.izzonline.h4': 'SDK plugin pubblicato su Maven Central, con sandbox per sviluppatori terzi e workflow di pubblicazione/validazione',
+    'exp.izzonline.h5': 'Sicurezza enterprise: Spring Security, JWT/OAuth2, API key management e tracking granulare dell\'utilizzo per multi-tenant',
+    'exp.izzonline.h6': 'Billing Stripe con sottoscrizioni e consumo a crediti; orchestrazione cross-service con pattern Saga ed event-driven',
+    'exp.izzonline.h7': 'CI/CD GitLab e deployment containerizzato con Docker, Kubernetes e Helm',
+    'exp.izzonline.h8': 'Creator di Football Metchy™, app mobile Flutter (iOS/Android) per organizzazione di eventi sportivi e partite di calcetto, progettata con evoluzione verso ranking dinamico, player matching intelligente e futura integrazione di modelli predittivi',
+    'exp.izzonline.h9': 'Creator di CodePilot, app nativa Swift per iPad/iPhone: AI-powered iPad IDE per sviluppo remoto da iPad, con AI Agent integrati e remote coding workflow',
     
     // AGM Solutions (for Engineering) – LNG Decision Support
-    'exp.agmlng.desc': 'Progettazione e sviluppo di una piattaforma di decision support per l\'ottimizzazione delle operazioni LNG, progettata come base per modelli avanzati di forecasting e optimization.',
-    'exp.agmlng.h1': 'Definizione e implementazione di un motore di simulazione (Python) per la pianificazione dei cargo LNG, con gestione di vincoli reali (capacity, berth availability, maintenance windows, regasification rates)',
-    'exp.agmlng.h2': 'Sviluppo di un backend Java (Spring Boot) per orchestrazione delle simulazioni e integrazione dati enterprise (SQL Server), con esposizione di API REST per scenari what-if',
-    'exp.agmlng.h3': 'Progettazione di un modello di simulazione realistico basato su unloading multi-day e inventory dinamico, foundation per modelli di previsione e ottimizzazione',
-    'exp.agmlng.h4': 'Implementazione di scenario analysis cumulativa (baseline vs scenario) con supporto a decisioni progressive (add, edit, replan, override)',
-    'exp.agmlng.h5': 'Sviluppo di una dashboard interattiva (Next.js, TypeScript) per visualizzazione real-time e decision explainability',
-    'exp.agmlng.h6': 'Architettura progettata per l\'integrazione di modelli ML (forecasting domanda, optimization multi-obiettivo) e digital twin simulations',
-    'exp.agmlng.h7': 'Collaborazione con stakeholder di business e team Engineering per validazione dei modelli e allineamento ai vincoli operativi reali',
+    'exp.agmlng.desc': 'Progettazione e sviluppo di una piattaforma di decision support per l\'ottimizzazione delle operazioni LNG, basata su un motore di simulazione Digital Twin che riproduce vincoli operativi reali (capacity, berth availability, maintenance windows, regasification rates). Architettura predisposta come fondazione per modelli di forecasting e ottimizzazione multi-obiettivo, e per scenari what-if a supporto di decisioni operative progressive.',
+    'exp.agmlng.h1': 'Motore di simulazione Python per la pianificazione dei cargo LNG, modellato su unloading multi-day e inventory dinamico — forecasting-ready e optimization-ready',
+    'exp.agmlng.h2': 'Backend Java/Spring Boot per orchestrazione delle simulazioni e integrazione dati enterprise (SQL Server), con API REST per scenari what-if',
+    'exp.agmlng.h3': 'Scenario analysis cumulativa (baseline vs scenario) a supporto di decisioni progressive: add, edit, replan, override',
+    'exp.agmlng.h4': 'Architettura predisposta per integrazione di modelli ML (forecasting domanda, ottimizzazione multi-obiettivo) e digital twin simulations',
+    'exp.agmlng.h5': 'Dashboard interattiva Next.js / TypeScript per visualizzazione real-time, scenario comparison e decision explainability',
+    'exp.agmlng.h6': 'Collaborazione con stakeholder di business e team Engineering per validazione dei modelli e allineamento ai vincoli operativi reali',
 
     // AGM Solutions (for Engineering) – NCIS Gas
     'exp.agmeng.desc': 'Sviluppo di uno dei microservizi core del sistema NCIS (National Comprehensive Information System) per la gestione operativa della rete di trasmissione del gas naturale, coprendo l\'intero ciclo di vita delle transazioni energetiche e delle nomination.',
-    'exp.agmeng.h1': 'Progettazione e sviluppo di un microservizio enterprise Java (Java 21, Spring Boot 3.x) per la gestione di flussi gas (buy/sell), nomination orarie e allocazioni energetiche',
-    'exp.agmeng.h2': 'Modellazione e orchestrazione del ciclo completo delle nomination (NOMINT, DELORD) con supporto multi-versione XML, validazione XSD e gestione evolutiva dei formati',
-    'exp.agmeng.h3': 'Integrazione real-time con sistemi SCADA per acquisizione dati di misura e calcolo di sbilanciamenti, allocazioni DIP e pricing operativo',
-    'exp.agmeng.h4': 'Integrazione con piattaforme di mercato europee (RBP, PRISMA) tramite API REST e flussi asincroni, garantendo consistenza e sincronizzazione dei dati',
-    'exp.agmeng.h5': 'Implementazione di job distribuiti cluster-aware (Quartz + ShedLock) per polling XML, sincronizzazione sistemi esterni e notifiche real-time',
-    'exp.agmeng.h6': 'Comunicazione inter-servizio tramite Spring Cloud OpenFeign verso microservizi core',
-    'exp.agmeng.h7': 'Implementazione sicurezza enterprise con OAuth2 (client credentials) e federazione AWS Cognito, con validazione JWT e gestione multi-tenant',
-    'exp.agmeng.h8': 'Audit trail completo tramite Hibernate Envers e notifiche real-time via WebSocket (STOMP/SockJS)',
-    'exp.agmeng.h9': 'Gestione documentale (XML/CSV/Excel) con Apache POI e versionamento su S3',
+    'exp.agmeng.h1': 'Microservizio enterprise Java 21 / Spring Boot 3 per la gestione di flussi gas (buy/sell), nomination orarie e allocazioni energetiche',
+    'exp.agmeng.h2': 'Ciclo completo delle nomination (NOMINT, DELORD) con supporto multi-versione XML, validazione XSD ed evoluzione dei formati',
+    'exp.agmeng.h3': 'Integrazione real-time con sistemi SCADA per acquisizione dati di misura, sbilanciamenti, allocazioni DIP e pricing operativo',
+    'exp.agmeng.h4': 'Integrazione con piattaforme di mercato europee (RBP, PRISMA) tramite API REST e flussi asincroni, con consistenza e sincronizzazione garantite',
+    'exp.agmeng.h5': 'Job distribuiti cluster-aware (Quartz + ShedLock) per polling XML, sincronizzazione sistemi esterni e notifiche real-time',
+    'exp.agmeng.h6': 'Comunicazione inter-servizio via Spring Cloud OpenFeign verso microservizi core',
+    'exp.agmeng.h7': 'Sicurezza enterprise OAuth2 (client credentials) con federazione AWS Cognito, validazione JWT e gestione multi-tenant',
+    'exp.agmeng.h8': 'Audit trail completo con Hibernate Envers, notifiche real-time via WebSocket (STOMP/SockJS) e gestione documentale (XML/CSV/Excel) con Apache POI e versionamento su S3',
+    'exp.agmeng.h9': '',
 
     // AGM Solutions (for Generali)
-    'exp.agm.desc': 'Team Leader di un progetto di cybersecurity focalizzato sulla valutazione e gestione delle vulnerabilità, comprendente sistemi di questionnaire assessment, flussi di remediation e strumenti per la gestione degli incidenti di sicurezza.',
-    'exp.agm.h1': 'Coordinamento tecnico del team e supervisione dell\'intero progetto nel dominio cybersecurity, garantendo qualità, sicurezza e continuità operativa',
-    'exp.agm.h2': 'Progettazione e configurazione di pipeline CI/CD per ambienti eterogenei: stack Windows/WildFly e piattaforma Linux/Kubernetes',
-    'exp.agm.h3': 'Integrazione di sistemi enterprise esterni per vulnerability scanning, firma digitale e incident management (Qualys, Namirial, Archer, ServiceNow) tramite API REST e servizi SOAP',
-    'exp.agm.h4': 'Configurazione avanzata di GitLab CI e gitlab-runner, con orchestrazione di container, build automatizzate e deployment multi-ambiente',
-    
+    'exp.agm.desc': 'Team Leader & Technical Ambassador di un progetto cybersecurity dedicato a vulnerability assessment & management, incluse piattaforme di questionnaire assessment, flussi di remediation e strumenti per l\'incident management.',
+    'exp.agm.h1': 'Coordinamento tecnico del team e supervisione end-to-end del progetto cybersecurity, garantendo qualità, sicurezza e continuità operativa',
+    'exp.agm.h2': 'Pipeline CI/CD per ambienti eterogenei: stack Windows/WildFly e piattaforma Linux/Kubernetes',
+    'exp.agm.h3': 'Integrazione di sistemi enterprise per vulnerability scanning, firma digitale e incident management (Qualys, Namirial, Archer, ServiceNow) via REST e SOAP',
+    'exp.agm.h4': 'Configurazione avanzata GitLab CI / gitlab-runner con orchestrazione container, build automatizzate e deployment multi-ambiente',
+
     // Deutsche Bank
-    'exp.deutsche.desc': 'Coinvolto nello sviluppo di servizi di pagamento conformi allo standard PSD2, contribuendo alla modernizzazione dell\'infrastruttura di banking digitale.',
-    'exp.deutsche.h1': 'Progettazione e sviluppo di servizi di pagamento PSD2-compliant, includendo flussi SCA (Strong Customer Authentication), gestione consensi e integrazione open banking',
-    'exp.deutsche.h2': 'Adozione di tecnologie cloud e architetture serverless, con particolare attenzione a scalabilità, sicurezza e affidabilità delle operazioni di pagamento',
-    
+    'exp.deutsche.desc': 'Sviluppo di servizi di pagamento conformi allo standard PSD2, contribuendo alla modernizzazione dell\'infrastruttura di banking digitale.',
+    'exp.deutsche.h1': 'Servizi di pagamento PSD2-compliant con flussi SCA (Strong Customer Authentication), gestione consensi e integrazione open banking',
+    'exp.deutsche.h2': 'Adozione di tecnologie cloud e architetture serverless con focus su scalabilità, sicurezza e affidabilità delle operazioni di pagamento',
+
     // Sorint Lab
-    'exp.sorint.desc': 'Partecipato a numerosi progetti interni e di consulenza IT, contribuendo allo sviluppo di suite software proprietarie e applicazioni enterprise per il settore finanziario.',
-    'exp.sorint.h1': 'Sviluppata un\'applicazione di portafoglio per London Stock Exchange e Bit Market Services, contribuendo a performance, affidabilità e integrazione con sistemi core dei mercati finanziari',
-    'exp.sorint.h2': 'Supervisionato e gestito progetti minori come Project Manager, coordinando team e garantendo la delivery nei tempi',
-    'exp.sorint.h3': 'Formatrice interna su Java, Spring Framework, Hibernate e jQuery per nuovi dipendenti e risorse junior',
-    'exp.sorint.h4': 'Realizzati moduli di pianificazione e assegnazione attività, migliorando processi interni e workflow operativi',
+    'exp.sorint.desc': 'Java Developer & Technical Lead su numerosi progetti interni e di consulenza IT, con contributi a suite software proprietarie e applicazioni enterprise per il settore finanziario.',
+    'exp.sorint.h1': 'Sviluppo dell\'applicazione di portafoglio per London Stock Exchange e Bit Market Services, con focus su performance, affidabilità e integrazione con i sistemi core dei mercati finanziari',
+    'exp.sorint.h2': 'Project management di progetti minori: coordinamento team e delivery nei tempi',
+    'exp.sorint.h3': 'Formazione interna su Java, Spring Framework, Hibernate e jQuery per nuovi assunti e risorse junior',
+    'exp.sorint.h4': 'Moduli di task planning e assegnazione attività a supporto di processi e workflow operativi interni',
     
     // Other Projects
     'exp.mbe.desc': 'Sviluppato strumento di fatturazione centralizzato per le filiali aziendali',

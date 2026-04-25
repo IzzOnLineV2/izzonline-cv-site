@@ -98,7 +98,7 @@ export function Experience() {
                             index % 4 === 1 ? 'text-purple-400' :
                             index % 4 === 2 ? 'text-pink-400' : 'text-emerald-400'
                           }`}>▸</span>
-                          <span>{highlight}</span>
+                          <span>{linkifyDescription(highlight, HOMEPAGE_LINK_CLASS)}</span>
                         </li>
                       ))}
                     </ul>

@@ -17,14 +17,17 @@ import './cv-print.css';
 const CV_LINK_CLASS = 'text-purple-700 underline decoration-purple-300 hover:decoration-purple-600';
 
 const SPRING_EXPERTISE = [
-  'Spring Core', 'Spring Context', 'Spring Beans', 'Spring SpEL',
-  'Spring Web MVC', 'Spring REST', 'Spring Boot', 'Spring Boot Actuator',
-  'Spring Data JPA', 'Spring Data MongoDB', 'Spring JDBC',
-  'Spring Transaction Management', 'Spring Security', 'Spring Security OAuth2',
-  'Spring Security SAML2', 'Spring Cloud Config', 'Spring Cloud Gateway',
-  'Spring Cloud OpenFeign', 'Spring Cloud Netflix', 'Spring Cloud Sleuth',
-  'Spring Test', 'Spring AI', 'Spring for Apache Kafka', 'Spring AMQP',
-  'Spring Scheduling', 'Spring Batch', 'Spring AOP', 'Spring Validation',
+  'Spring Boot',
+  'Spring Framework',
+  'Spring Security (OAuth2, SAML2)',
+  'Spring Data (JPA, MongoDB)',
+  'Spring Cloud (Gateway, Config, OpenFeign)',
+  'Spring AI',
+  'Spring for Apache Kafka',
+  'Spring AMQP',
+  'Spring Batch',
+  'Spring Scheduling',
+  'Spring Test',
 ];
 
 type SectionId = 'header' | 'summary' | 'experience' | 'otherProjects' | 'skills' | 'springExpertise' | 'education';
@@ -246,7 +249,7 @@ export default function CvPage() {
                   {exp.highlights.map((h, j) => (
                     <li key={j} className="flex gap-2">
                       <span className="mt-[3px] shrink-0 text-slate-400">▸</span>
-                      <span>{h}</span>
+                      <span>{linkifyDescription(h, CV_LINK_CLASS)}</span>
                     </li>
                   ))}
                 </ul>
