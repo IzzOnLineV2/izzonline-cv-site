@@ -4,6 +4,10 @@ import { Badge } from './ui/badge';
 import { Briefcase, Calendar, MapPin } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
 import { getExperiences, getOtherProjects } from '../data/cv-data';
+import { linkifyDescription } from '../lib/linkify-description';
+
+const HOMEPAGE_LINK_CLASS =
+  'text-cyan-400 hover:text-cyan-300 underline decoration-cyan-400/50 hover:decoration-cyan-300 transition-colors';
 
 export function Experience() {
   const { t } = useLanguage();
@@ -82,72 +86,7 @@ export function Experience() {
                   </div>
 
                   <p className="text-slate-300 dark:text-slate-300 light:text-slate-700 mb-4">
-                    {(() => {
-                      let text = exp.description;
-                      const parts: (string | JSX.Element)[] = [];
-                      let key = 0;
-                      
-                      // First, handle the first occurrence of SmartApiBox with link
-                      const firstSmartApiBoxIndex = text.indexOf('SmartApiBox');
-                      if (firstSmartApiBoxIndex !== -1) {
-                        parts.push(text.substring(0, firstSmartApiBoxIndex));
-                        parts.push(
-                          <a 
-                            key={key++}
-                            href="https://smartapibox.com" 
-                            target="_blank" 
-                            rel="noopener noreferrer"
-                            className="text-cyan-400 hover:text-cyan-300 underline decoration-cyan-400/50 hover:decoration-cyan-300 transition-colors"
-                          >
-                            SmartApiBox
-                          </a>
-                        );
-                        text = text.substring(firstSmartApiBoxIndex + 'SmartApiBox'.length);
-                      }
-                      
-                      // Handle inline links: SDK + external domains
-                      const linkTokens: { match: string; label: string; href: string }[] = [
-                        { match: 'SDK', label: 'SDK', href: 'https://mvnrepository.com/artifact/com.smartapibox/plugin-api-sdk' },
-                        { match: 'smartqrbox.com', label: 'smartqrbox.com', href: 'https://smartqrbox.com' },
-                        { match: 'whatschat.smartapibox.com', label: 'whatschat.smartapibox.com', href: 'https://whatschat.smartapibox.com' },
-                        { match: 'quizforge.smartapibox.com', label: 'quizforge.smartapibox.com', href: 'https://quizforge.smartapibox.com' },
-                        { match: 'Football Metchy', label: 'Football Metchy', href: 'https://metchy.events/' },
-                        { match: 'CodePilot', label: 'CodePilot', href: 'https://codepilot.it' },
-                      ];
-                      let currentText = text;
-                      while (currentText.length > 0) {
-                        let nextIndex = -1;
-                        let nextToken: typeof linkTokens[number] | null = null;
-                        for (const token of linkTokens) {
-                          const idx = currentText.indexOf(token.match);
-                          if (idx !== -1 && (nextIndex === -1 || idx < nextIndex)) {
-                            nextIndex = idx;
-                            nextToken = token;
-                          }
-                        }
-
-                        if (nextIndex === -1 || !nextToken) {
-                          parts.push(currentText);
-                          break;
-                        }
-
-                        parts.push(currentText.substring(0, nextIndex));
-                        parts.push(
-                          <a
-                            key={key++}
-                            href={nextToken.href}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="text-cyan-400 hover:text-cyan-300 underline decoration-cyan-400/50 hover:decoration-cyan-300 transition-colors"
-                          >
-                            {nextToken.label}
-                          </a>
-                        );
-                        currentText = currentText.substring(nextIndex + nextToken.match.length);
-                      }
-                      
-                      return parts;
-                    })()}
+                    {linkifyDescription(exp.description, HOMEPAGE_LINK_CLASS)}
                   </p>
 
                   {exp.highlights && (

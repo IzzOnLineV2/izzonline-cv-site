@@ -11,7 +11,10 @@ import {
   getEducation,
   skillCategoriesData,
 } from '../../data/cv-data';
+import { linkifyDescription } from '../../lib/linkify-description';
 import './cv-print.css';
+
+const CV_LINK_CLASS = 'text-purple-700 underline decoration-purple-300 hover:decoration-purple-600';
 
 const SPRING_EXPERTISE = [
   'Spring Core', 'Spring Context', 'Spring Beans', 'Spring SpEL',
@@ -236,7 +239,9 @@ export default function CvPage() {
                     <EntryToggleBtn on={expIncluded[i] !== false} onClick={() => toggleExp(i)} />
                   </div>
                 </div>
-                <p className="mt-1 text-sm leading-relaxed text-slate-700">{exp.description}</p>
+                <p className="mt-1 text-sm leading-relaxed text-slate-700">
+                  {linkifyDescription(exp.description, CV_LINK_CLASS)}
+                </p>
                 <ul className="mt-2 space-y-1 text-sm text-slate-700">
                   {exp.highlights.map((h, j) => (
                     <li key={j} className="flex gap-2">
@@ -278,7 +283,9 @@ export default function CvPage() {
                     <EntryToggleBtn on={otherIncluded[i] !== false} onClick={() => toggleOther(i)} />
                   </div>
                 </div>
-                <p className="mt-0.5 text-sm text-slate-700">{p.description}</p>
+                <p className="mt-0.5 text-sm text-slate-700">
+                  {linkifyDescription(p.description, CV_LINK_CLASS)}
+                </p>
                 <div className="cv-no-justify mt-1.5 flex flex-wrap gap-1">
                   {p.technologies.map((tech, j) => (
                     <span
