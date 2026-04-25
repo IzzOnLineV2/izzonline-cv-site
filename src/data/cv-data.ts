@@ -28,7 +28,7 @@ export function getExperiences(t: T): ExperienceEntry[] {
     {
       company: 'IzzOnLine - SmartApiBox',
       role: 'AI Platform Architect & Senior Java Engineer',
-      period: 'Sep 2018 - Present · 7 yrs 3 mos',
+      period: `${t('cv.month.sep')} 2018 - ${t('cv.present')} · 7 ${t('cv.yrs')} 3 ${t('cv.mos')}`,
       location: 'Bergamo Area, Italy',
       description: t('exp.izzonline.desc'),
       highlights: [
@@ -47,7 +47,7 @@ export function getExperiences(t: T): ExperienceEntry[] {
     {
       company: 'AGM Solutions (for Engineering)',
       role: 'Senior Java Backend Developer',
-      period: 'Jan 2026 - Present',
+      period: `${t('cv.month.jan')} 2026 - ${t('cv.present')}`,
       location: 'Italy',
       description: t('exp.agmlng.desc'),
       highlights: [
@@ -63,7 +63,7 @@ export function getExperiences(t: T): ExperienceEntry[] {
     {
       company: 'AGM Solutions (for Engineering)',
       role: 'Senior Java Backend Developer',
-      period: 'Mag 2024 – Mag 2025',
+      period: `${t('cv.month.may')} 2024 – ${t('cv.month.may')} 2025`,
       location: 'Italy',
       description: t('exp.agmeng.desc'),
       highlights: [
