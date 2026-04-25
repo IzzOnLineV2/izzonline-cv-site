@@ -30,7 +30,7 @@ export const translations = {
     // Summary
     'summary.badge': 'About Me',
     'summary.title': 'Professional Summary',
-    'summary.content': 'Senior Java Developer with over 15 years of experience in designing and developing enterprise applications and distributed systems. Specialized in Spring ecosystem, microservices architecture, and AI integration. Proven track record in leading technical teams and delivering mission-critical solutions for finance, insurance, and cybersecurity sectors.',
+    'summary.content': 'Senior Java Developer and AI Platform Architect with nearly 20 years of experience designing and developing enterprise applications, distributed systems and mission-critical backend platforms. Specialized in the Spring ecosystem, microservices architectures, AI/LLM integration and ML-ready solutions. Combines enterprise backend expertise with AI systems design — simulation, optimization and Digital Twin — to deliver scalable, production-grade solutions. Proven track record leading technical teams and delivering mission-critical solutions in finance, insurance, cybersecurity and energy.',
     
     // Skills
     'skills.badge': 'Technical Expertise',
@@ -58,7 +58,7 @@ export const translations = {
     'experience.additional': 'Additional Projects & Clients',
     
     // IzzOnLine
-    'exp.izzonline.desc': 'Since 2018, I work as a freelance Java Backend Developer, supporting various companies in the design and development of enterprise applications and distributed systems. Over the years I have consolidated solid technical, architectural and leadership skills, contributing to the delivery of mission-critical solutions in the finance, insurance and cybersecurity sectors. In parallel, I designed and built SmartApiBox, a multi-module Java/Spring Boot platform developed entirely in my spare time. The platform integrates: plugin-based architecture for AI service orchestration, advanced authentication (JWT + OAuth2), Stripe integration for subscription and consumption billing, extensible plugin system through an SDK published on Maven Central, configurable API keys with support for multiple AI models (OpenAI GPT, Llama, etc.), a dedicated sandbox environment for third-party developers to create, test and publish plugins securely, cross-service workflows coordinated with the Saga pattern, ensuring consistency and reliability, AI plugins exposed both as REST APIs and MCP Tools, including a dedicated bridge for compatibility with Claude Desktop. SmartApiBox is a developer-first platform that enables building, deploying and monetizing AI-powered APIs in minutes, completely abstracting infrastructural complexity, billing and scalability. APIs become true standalone products, exposed through dedicated domains like smartqrbox.com, whatschat.smartapibox.com or quizforge.smartapibox.com. I also developed a hybrid (iOS/Android) Flutter app to organize 5-a-side football matches: Football Metchy™, and I\'m building a native Swift app for iPad/iPhone: CodePilot, a mini IDE to develop on iPad with integrated AI Agents.',
+    'exp.izzonline.desc': 'Since 2018, working as a freelance Java Backend Developer and AI Platform Architect, supporting companies in the design and development of enterprise applications, microservices and distributed systems. In parallel, designed and built SmartApiBox, a multi-module Java/Spring Boot platform to build, deploy and monetize AI-powered APIs by abstracting infrastructure, billing, authentication and LLM provider integration. SmartApiBox is also a developer-first platform: each API can become a standalone product exposed through dedicated domains like smartqrbox.com, whatschat.smartapibox.com or quizforge.smartapibox.com.',
     'exp.izzonline.h1': 'Plugin-based architecture for AI service orchestration with dynamic discovery, versioning and sandbox/production isolation',
     'exp.izzonline.h2': 'AI APIs exposed both as REST APIs and MCP Tools, with a dedicated bridge for Claude Desktop compatibility',
     'exp.izzonline.h3': 'LLM provider integration via Spring AI: OpenAI, Ollama, Llama and per-tenant configurable models',
@@ -70,44 +70,44 @@ export const translations = {
     'exp.izzonline.h9': 'Creator of CodePilot, a native Swift app for iPad/iPhone: AI-powered iPad IDE for remote development from iPad, with integrated AI Agents and remote coding workflow',
     
     // AGM Solutions (for Engineering) – LNG Decision Support
-    'exp.agmlng.desc': 'Design and development of a decision support platform for LNG operations optimization, designed as a foundation for advanced forecasting and optimization models.',
-    'exp.agmlng.h1': 'Definition and implementation of a simulation engine (Python) for LNG cargo planning, managing real-world constraints (capacity, berth availability, maintenance windows, regasification rates)',
-    'exp.agmlng.h2': 'Development of a Java backend (Spring Boot) for simulation orchestration and enterprise data integration (SQL Server), exposing REST APIs for what-if scenarios',
-    'exp.agmlng.h3': 'Design of a realistic simulation model based on multi-day unloading and dynamic inventory, foundation for forecasting and optimization models',
-    'exp.agmlng.h4': 'Implementation of cumulative scenario analysis (baseline vs scenario) with support for progressive decisions (add, edit, replan, override)',
-    'exp.agmlng.h5': 'Development of an interactive dashboard (Next.js, TypeScript) for real-time visualization and decision explainability',
-    'exp.agmlng.h6': 'Architecture designed for the integration of ML models (demand forecasting, multi-objective optimization) and digital twin simulations',
+    'exp.agmlng.desc': 'Design and development of a decision support platform for LNG operations optimization, based on a Digital Twin simulation engine that models real-world operational constraints (capacity, berth availability, maintenance windows, regasification rates). Architecture designed as a foundation for forecasting and multi-objective optimization models, and for what-if scenarios supporting progressive operational decisions.',
+    'exp.agmlng.h1': 'Python simulation engine for LNG cargo planning, modeled on multi-day unloading and dynamic inventory — forecasting-ready and optimization-ready',
+    'exp.agmlng.h2': 'Java/Spring Boot backend for simulation orchestration and enterprise data integration (SQL Server), with REST APIs for what-if scenarios',
+    'exp.agmlng.h3': 'Cumulative scenario analysis (baseline vs scenario) supporting progressive decisions: add, edit, replan, override',
+    'exp.agmlng.h4': 'Architecture designed for the integration of ML models (demand forecasting, multi-objective optimization) and digital twin simulations',
+    'exp.agmlng.h5': 'Interactive Next.js / TypeScript dashboard for real-time visualization, scenario comparison and decision explainability',
+    'exp.agmlng.h6': 'Collaboration with business stakeholders and Engineering teams for model validation and alignment with real operational constraints',
 
     // AGM Solutions (for Engineering) – NCIS Gas
-    'exp.agmeng.desc': 'Developed one of the core microservices of the NCIS (National Comprehensive Information System) for the operational management of the natural gas transmission network, covering the full lifecycle of energy transactions and nominations.',
-    'exp.agmeng.h1': 'Design and development of a Java enterprise microservice (Java 21, Spring Boot 3.x) for managing gas flows (buy/sell), hourly nominations and energy allocations',
-    'exp.agmeng.h2': 'Modeling and orchestration of the complete nomination lifecycle (NOMINT, DELORD) with multi-version XML support, XSD validation and evolutionary format management',
-    'exp.agmeng.h3': 'Real-time integration with SCADA systems for metering data acquisition and calculation of imbalances, DIP allocations and operational pricing',
-    'exp.agmeng.h4': 'Integration with European market platforms (RBP, PRISMA) via REST APIs and asynchronous flows, ensuring data consistency and synchronization',
-    'exp.agmeng.h5': 'Implementation of cluster-aware distributed jobs (Quartz + ShedLock) for XML polling, external system synchronization and real-time notifications',
+    'exp.agmeng.desc': 'Development of one of the core microservices of the NCIS (National Comprehensive Information System) for the operational management of the natural gas transmission network, covering the full lifecycle of energy transactions and nominations.',
+    'exp.agmeng.h1': 'Enterprise Java 21 / Spring Boot 3 microservice for managing gas flows (buy/sell), hourly nominations and energy allocations',
+    'exp.agmeng.h2': 'Full nomination lifecycle (NOMINT, DELORD) with multi-version XML support, XSD validation and format evolution',
+    'exp.agmeng.h3': 'Real-time integration with SCADA systems for metering data acquisition, imbalances, DIP allocations and operational pricing',
+    'exp.agmeng.h4': 'Integration with European market platforms (RBP, PRISMA) via REST APIs and asynchronous flows, with guaranteed data consistency and synchronization',
+    'exp.agmeng.h5': 'Cluster-aware distributed jobs (Quartz + ShedLock) for XML polling, external system synchronization and real-time notifications',
     'exp.agmeng.h6': 'Inter-service communication via Spring Cloud OpenFeign to core microservices',
-    'exp.agmeng.h7': 'Enterprise security implementation with OAuth2 (client credentials) and AWS Cognito federation, with JWT validation and multi-tenant management',
-    'exp.agmeng.h8': 'Complete audit trail via Hibernate Envers and real-time notifications via WebSocket (STOMP/SockJS)',
-    'exp.agmeng.h9': 'Document management (XML/CSV/Excel) with Apache POI and versioning on S3',
+    'exp.agmeng.h7': 'Enterprise OAuth2 security (client credentials) with AWS Cognito federation, JWT validation and multi-tenant management',
+    'exp.agmeng.h8': 'Complete audit trail with Hibernate Envers, real-time notifications via WebSocket (STOMP/SockJS) and document management (XML/CSV/Excel) with Apache POI and versioning on S3',
+    'exp.agmeng.h9': '',
 
     // AGM Solutions (for Generali)
-    'exp.agm.desc': 'Team Leader of a cybersecurity project focused on vulnerability assessment and management, including questionnaire assessment systems, remediation flows and security incident management tools.',
-    'exp.agm.h1': 'Technical team coordination and supervision of the entire project in the cybersecurity domain, ensuring quality, security and operational continuity',
-    'exp.agm.h2': 'Design and configuration of CI/CD pipelines for heterogeneous environments: Windows/WildFly stack and Linux/Kubernetes platform',
-    'exp.agm.h3': 'Integration of external enterprise systems for vulnerability scanning, digital signature and incident management (Qualys, Namirial, Archer, ServiceNow) via REST APIs and SOAP services',
-    'exp.agm.h4': 'Advanced configuration of GitLab CI and gitlab-runner, with container orchestration, automated builds and multi-environment deployment',
-    
+    'exp.agm.desc': 'Team Leader & Technical Ambassador of a cybersecurity project focused on vulnerability assessment & management, including questionnaire assessment platforms, remediation flows and incident management tools.',
+    'exp.agm.h1': 'End-to-end technical team coordination and project supervision in the cybersecurity domain, ensuring quality, security and operational continuity',
+    'exp.agm.h2': 'CI/CD pipelines for heterogeneous environments: Windows/WildFly stack and Linux/Kubernetes platform',
+    'exp.agm.h3': 'Integration of enterprise systems for vulnerability scanning, digital signature and incident management (Qualys, Namirial, Archer, ServiceNow) via REST and SOAP',
+    'exp.agm.h4': 'Advanced GitLab CI / gitlab-runner configuration with container orchestration, automated builds and multi-environment deployment',
+
     // Deutsche Bank
-    'exp.deutsche.desc': 'Involved in the development of payment services compliant with the PSD2 standard, contributing to the modernization of digital banking infrastructure.',
-    'exp.deutsche.h1': 'Design and development of PSD2-compliant payment services, including SCA (Strong Customer Authentication) flows, consent management and open banking integration',
-    'exp.deutsche.h2': 'Adoption of cloud technologies and serverless architectures, with particular attention to scalability, security and reliability of payment operations',
-    
+    'exp.deutsche.desc': 'Development of payment services compliant with the PSD2 standard, contributing to the modernization of digital banking infrastructure.',
+    'exp.deutsche.h1': 'PSD2-compliant payment services with SCA (Strong Customer Authentication) flows, consent management and open banking integration',
+    'exp.deutsche.h2': 'Adoption of cloud technologies and serverless architectures with focus on scalability, security and reliability of payment operations',
+
     // Sorint Lab
-    'exp.sorint.desc': 'Participated in numerous internal and IT consulting projects, contributing to the development of proprietary software suites and enterprise applications for the financial sector.',
-    'exp.sorint.h1': 'Developed a portfolio application for London Stock Exchange and Bit Market Services, contributing to performance, reliability and integration with financial market core systems',
-    'exp.sorint.h2': 'Supervised and managed minor projects as Project Manager, coordinating teams and ensuring on-time delivery',
-    'exp.sorint.h3': 'Internal trainer on Java, Spring Framework, Hibernate and jQuery for new hires and junior resources',
-    'exp.sorint.h4': 'Implemented task planning and assignment modules, improving internal processes and operational workflows',
+    'exp.sorint.desc': 'Java Developer & Technical Lead on numerous internal and IT consulting projects, with contributions to proprietary software suites and enterprise applications for the financial sector.',
+    'exp.sorint.h1': 'Development of the portfolio application for London Stock Exchange and Bit Market Services, with focus on performance, reliability and integration with financial market core systems',
+    'exp.sorint.h2': 'Project management of minor projects: team coordination and on-time delivery',
+    'exp.sorint.h3': 'Internal training on Java, Spring Framework, Hibernate and jQuery for new hires and junior resources',
+    'exp.sorint.h4': 'Task planning and assignment modules supporting internal processes and operational workflows',
     
     // Other Projects
     'exp.mbe.desc': 'Developed centralized billing tool for company branches',
