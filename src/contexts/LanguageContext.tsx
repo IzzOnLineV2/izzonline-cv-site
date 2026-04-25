@@ -151,6 +151,10 @@ export const translations = {
     'cv.education': 'Education',
     'cv.skills': 'Technical Skills',
     'cv.springExpertise': 'Spring Framework Expertise',
+    'cv.include': 'Include',
+    'cv.exclude': 'Exclude',
+    'cv.minimize': 'Minimize',
+    'cv.expand': 'Expand',
   },
   it: {
     // Header
@@ -292,6 +296,10 @@ export const translations = {
     'cv.education': 'Formazione',
     'cv.skills': 'Competenze Tecniche',
     'cv.springExpertise': 'Competenze Spring Framework',
+    'cv.include': 'Includi',
+    'cv.exclude': 'Escludi',
+    'cv.minimize': 'Minimizza',
+    'cv.expand': 'Espandi',
   },
 };
 

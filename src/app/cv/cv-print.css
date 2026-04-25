@@ -10,6 +10,45 @@
   font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
   font-size: 12pt;
   line-height: 1.45;
+  text-align: justify;
+  text-justify: inter-word;
+  hyphens: auto;
+}
+
+.cv-page h1,
+.cv-page h2,
+.cv-page h3,
+.cv-page h4 {
+  text-align: left;
+  hyphens: manual;
+}
+
+.cv-page .cv-no-justify,
+.cv-page .cv-no-justify * {
+  text-align: left;
+}
+
+/* Excluded section: dimmed on screen, hidden in print */
+.cv-page .cv-section-excluded {
+  opacity: 0.35;
+  filter: grayscale(0.6);
+}
+
+@media print {
+  .cv-page .cv-section-excluded {
+    display: none !important;
+  }
+  .cv-page .cv-section-toggle {
+    display: none !important;
+  }
+  .cv-page .cv-photo,
+  .cv-page .cv-qr {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+    color-adjust: exact !important;
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
 }
 
 .cv-page a {
