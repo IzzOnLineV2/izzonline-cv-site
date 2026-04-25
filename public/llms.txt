@@ -1,0 +1,49 @@
+# Stefania Izzo — AI Platform Architect & Senior Java Engineer
+
+> Senior Java Developer e AI Platform Architect freelance basata a Cologno Al Serio (BG), Italia. Quasi 20 anni di esperienza nella progettazione di sistemi enterprise, microservizi, AI APIs e piattaforme ML-ready (Spring AI, OpenAI, Ollama, MCP, Digital Twin). Founder di SmartApiBox, creator di Football Metchy e CodePilot.
+
+## Profilo
+
+- **Nome**: Stefania Izzo
+- **Ruolo**: AI Platform Architect & Senior Java Engineer
+- **Sede**: Cologno Al Serio (BG), Italia
+- **Disponibilità**: Freelance dal 2018, progetti italiani ed europei (remote)
+- **Sito**: https://izzonline.it
+- **Email**: izzonline@gmail.com
+- **LinkedIn**: https://www.linkedin.com/in/st3fania/
+- **GitHub**: https://github.com/IzzOnLineV2
+
+## Aree di expertise
+
+- Java enterprise (Java 17/21, Spring Boot, Spring Framework, Spring Cloud, Spring Security, Spring AI, Jakarta EE)
+- Architetture distribuite (microservices, hexagonal architecture, DDD, event-driven, Saga pattern, plugin-based, multi-tenant)
+- AI / LLM (Spring AI, OpenAI, Ollama, Llama, Model Context Protocol/MCP, LLM orchestration, AI API design, prompt engineering)
+- ML-ready systems (XGBoost, Digital Twin, forecasting, optimization, simulation engines)
+- Security (OAuth2, JWT, SAML2, Keycloak, AWS Cognito, LDAP)
+- DevOps & Cloud (Docker, Kubernetes, Helm, GitLab CI/CD, AWS, OpenShift)
+- Frontend & Mobile (Next.js, TypeScript, Angular, Flutter, Swift)
+
+## Prodotti e progetti propri
+
+- **SmartApiBox** (https://smartapibox.com): piattaforma multi-modulo Java/Spring Boot per costruire, distribuire e monetizzare AI APIs. Plugin-based architecture, SDK su Maven Central, MCP Tools, billing Stripe, multi-tenant. Domini standalone: smartqrbox.com, whatschat.smartapibox.com, quizforge.smartapibox.com.
+- **Football Metchy** (https://metchy.events): app mobile Flutter (iOS/Android) per organizzazione eventi sportivi e partite di calcetto, con architettura predisposta per ranking dinamico e player matching intelligente.
+- **CodePilot** (https://codepilot.it): app nativa Swift per iPad/iPhone — AI-powered iPad IDE con AI Agent integrati e remote coding workflow.
+
+## Esperienza professionale (sintesi)
+
+- **2026 – Present** · AGM Solutions (for Engineering): Senior Java Backend Developer su piattaforma decision support LNG / Digital Twin (Python simulation, Spring Boot, Next.js, ML-ready architecture).
+- **2024 – 2025** · AGM Solutions (for Engineering): Senior Java Backend Developer su microservizio core NCIS per la rete di trasmissione gas naturale (Java 21, Spring Boot 3, OAuth2/Cognito, SCADA, RBP/PRISMA, Quartz+ShedLock, Hibernate Envers, WebSocket, S3).
+- **2019 – 2023** · AGM Solutions (for Generali Assicurazioni): Team Leader & Technical Ambassador su progetto cybersecurity (vulnerability assessment, remediation, incident management, GitLab CI, Kubernetes).
+- **2018 – Present** · IzzOnLine — SmartApiBox: AI Platform Architect & Senior Java Engineer freelance.
+- **2018 – 2019** · Deutsche Bank: Backend Developer su servizi PSD2 / Open Banking.
+- **2007 – 2018** · Sorint.Lab: Java Developer & Technical Lead (London Stock Exchange, Bit Market Services, formazione interna).
+
+## Formazione
+
+- ITIS Pietro Paleocapa — Diploma in Informatica
+- ISIS Zenale e Butinone — Diploma in Operatore della Gestione Aziendale
+
+## Risorse
+
+- [CV stampabile](https://izzonline.it/cv)
+- [Sitemap](https://izzonline.it/sitemap.xml)
