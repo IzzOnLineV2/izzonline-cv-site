@@ -251,77 +251,6 @@ const profilePageLd = {
   about: { '@id': `${SITE_URL}#person` },
 };
 
-const faqLd = {
-  '@context': 'https://schema.org',
-  '@type': 'FAQPage',
-  mainEntity: [
-    {
-      '@type': 'Question',
-      name: 'Chi è Stefania Izzo?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Stefania Izzo è una Senior Java Developer e AI Platform Architect freelance basata a Cologno Al Serio (BG), Italia, con quasi 20 anni di esperienza nella progettazione di sistemi enterprise, microservizi e piattaforme AI-ready. È founder di SmartApiBox e creator di Football Metchy e CodePilot.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Cosa fa Stefania Izzo?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Progetta e sviluppa applicazioni enterprise Java/Spring Boot, microservizi, AI APIs, integrazioni LLM (OpenAI, Ollama, MCP), motori di simulazione Digital Twin e architetture ML-ready per i settori finanza, assicurazioni, cybersecurity ed energia.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: "Cos'è SmartApiBox?",
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'SmartApiBox è una piattaforma multi-modulo Java/Spring Boot creata da Stefania Izzo per costruire, distribuire e monetizzare API alimentate da AI. Integra architettura plugin-based, SDK pubblicato su Maven Central, MCP Tools, billing Stripe, autenticazione OAuth2/JWT e supporto a OpenAI, Ollama e Llama.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Quali tecnologie usa Stefania Izzo?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Java 17/21, Spring Boot, Spring Framework, Spring AI, Spring Cloud, Python, TypeScript, Next.js, Microservices, Saga Pattern, Event-Driven Architecture, OAuth2, JWT, AWS Cognito, Apache Kafka, Docker, Kubernetes, Helm, GitLab CI/CD, PostgreSQL, MongoDB, Redis, Model Context Protocol, OpenAI, Ollama, XGBoost, Digital Twin.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Stefania Izzo è disponibile per consulenze freelance?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Sì. Lavora come Java Backend Developer freelance e AI Platform Architect dal 2018, supportando aziende italiane ed europee in progetti enterprise mission-critical, microservizi, AI integration e architetture ML-ready.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Dove si trova Stefania Izzo?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'È basata a Cologno Al Serio, in provincia di Bergamo (BG), Italia. Lavora in remoto con clienti italiani ed europei.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: "Cos'è Football Metchy?",
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Football Metchy è un\'app mobile Flutter (iOS/Android) creata da Stefania Izzo per organizzare eventi sportivi e partite di calcetto, progettata con evoluzione verso ranking dinamico e player matching intelligente.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: "Cos'è CodePilot?",
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: "CodePilot è un'app nativa Swift per iPad/iPhone creata da Stefania Izzo: un AI-powered iPad IDE per sviluppare da iPad con AI Agent integrati e remote coding workflow.",
-      },
-    },
-  ],
-};
-
 const websiteLd = {
   '@context': 'https://schema.org',
   '@type': 'WebSite',
@@ -334,7 +263,7 @@ const websiteLd = {
 
 const allLd = {
   '@context': 'https://schema.org',
-  '@graph': [personLd, izzonlineOrgLd, smartapiboxOrgLd, profilePageLd, faqLd, websiteLd],
+  '@graph': [personLd, izzonlineOrgLd, smartapiboxOrgLd, profilePageLd, websiteLd],
 };
 
 export default function RootLayout({
